@@ -1,0 +1,1922 @@
+
+dist/default/debug/inverter_serial.debug.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00802800  00000be8  00000cbc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000be8  00000000  00000000  000000d4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000147  00802802  00802802  00000cbe  2**0
+                  ALLOC
+  3 .fuse         00000009  00820000  00820000  00000cbe  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .lock         00000001  00830000  00830000  00000cc7  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  5 .comment      00000030  00000000  00000000  00000cc8  2**0
+                  CONTENTS, READONLY
+  6 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000cf8  2**2
+                  CONTENTS, READONLY
+  7 .debug_aranges 00000190  00000000  00000000  00000d38  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info   000046d3  00000000  00000000  00000ec8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 00002941  00000000  00000000  0000559b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line   00000e8b  00000000  00000000  00007edc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_frame  00000478  00000000  00000000  00008d68  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_str    000020fc  00000000  00000000  000091e0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_loc    00000c1e  00000000  00000000  0000b2dc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 00000150  00000000  00000000  0000befa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 60 00 	jmp	0xc0	; 0xc0 <__ctors_end>
+   4:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+   8:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+   c:	0c 94 d8 00 	jmp	0x1b0	; 0x1b0 <__vector_3>
+  10:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  14:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  18:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  1c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  20:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  24:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  28:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  2c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  30:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__vector_12>
+  34:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  38:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  3c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  40:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  44:	0c 94 30 03 	jmp	0x660	; 0x660 <__vector_17>
+  48:	0c 94 a7 03 	jmp	0x74e	; 0x74e <__vector_18>
+  4c:	0c 94 e9 03 	jmp	0x7d2	; 0x7d2 <__vector_19>
+  50:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  54:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  58:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  5c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  60:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  64:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  68:	0c 94 0b 01 	jmp	0x216	; 0x216 <__vector_26>
+  6c:	0c 94 70 01 	jmp	0x2e0	; 0x2e0 <__vector_27>
+  70:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  74:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  78:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  7c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  80:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  84:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  88:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  8c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  90:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  94:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  98:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  9c:	0c 94 7d 00 	jmp	0xfa	; 0xfa <__bad_interrupt>
+  a0:	00 02       	muls	r16, r16
+  a2:	09 02       	muls	r16, r25
+  a4:	12 02       	muls	r17, r18
+  a6:	1b 02       	muls	r17, r27
+  a8:	24 02       	muls	r18, r20
+  aa:	2d 02       	muls	r18, r29
+  ac:	48 02       	muls	r20, r24
+  ae:	48 02       	muls	r20, r24
+  b0:	48 02       	muls	r20, r24
+  b2:	48 02       	muls	r20, r24
+  b4:	48 02       	muls	r20, r24
+  b6:	48 02       	muls	r20, r24
+  b8:	48 02       	muls	r20, r24
+  ba:	48 02       	muls	r20, r24
+  bc:	36 02       	muls	r19, r22
+  be:	3f 02       	muls	r19, r31
+
+000000c0 <__ctors_end>:
+  c0:	11 24       	eor	r1, r1
+  c2:	1f be       	out	0x3f, r1	; 63
+  c4:	cf ef       	ldi	r28, 0xFF	; 255
+  c6:	cd bf       	out	0x3d, r28	; 61
+  c8:	df e3       	ldi	r29, 0x3F	; 63
+  ca:	de bf       	out	0x3e, r29	; 62
+
+000000cc <__do_copy_data>:
+  cc:	18 e2       	ldi	r17, 0x28	; 40
+  ce:	a0 e0       	ldi	r26, 0x00	; 0
+  d0:	b8 e2       	ldi	r27, 0x28	; 40
+  d2:	e8 ee       	ldi	r30, 0xE8	; 232
+  d4:	fb e0       	ldi	r31, 0x0B	; 11
+  d6:	02 c0       	rjmp	.+4      	; 0xdc <__do_copy_data+0x10>
+  d8:	05 90       	lpm	r0, Z+
+  da:	0d 92       	st	X+, r0
+  dc:	a2 30       	cpi	r26, 0x02	; 2
+  de:	b1 07       	cpc	r27, r17
+  e0:	d9 f7       	brne	.-10     	; 0xd8 <__do_copy_data+0xc>
+
+000000e2 <__do_clear_bss>:
+  e2:	29 e2       	ldi	r18, 0x29	; 41
+  e4:	a2 e0       	ldi	r26, 0x02	; 2
+  e6:	b8 e2       	ldi	r27, 0x28	; 40
+  e8:	01 c0       	rjmp	.+2      	; 0xec <.do_clear_bss_start>
+
+000000ea <.do_clear_bss_loop>:
+  ea:	1d 92       	st	X+, r1
+
+000000ec <.do_clear_bss_start>:
+  ec:	a9 34       	cpi	r26, 0x49	; 73
+  ee:	b2 07       	cpc	r27, r18
+  f0:	e1 f7       	brne	.-8      	; 0xea <.do_clear_bss_loop>
+  f2:	0e 94 be 00 	call	0x17c	; 0x17c <main>
+  f6:	0c 94 f2 05 	jmp	0xbe4	; 0xbe4 <_exit>
+
+000000fa <__bad_interrupt>:
+  fa:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000fe <__vector_12>:
+#include "modbus.h"
+#include "inverter.h"
+
+volatile uint8_t tickcount=0;
+
+ISR(TCB0_INT_vect) { //this ISR is called 5000 times per second
+  fe:	1f 92       	push	r1
+ 100:	0f 92       	push	r0
+ 102:	0f b6       	in	r0, 0x3f	; 63
+ 104:	0f 92       	push	r0
+ 106:	11 24       	eor	r1, r1
+ 108:	2f 93       	push	r18
+ 10a:	3f 93       	push	r19
+ 10c:	4f 93       	push	r20
+ 10e:	5f 93       	push	r21
+ 110:	6f 93       	push	r22
+ 112:	7f 93       	push	r23
+ 114:	8f 93       	push	r24
+ 116:	9f 93       	push	r25
+ 118:	af 93       	push	r26
+ 11a:	bf 93       	push	r27
+ 11c:	ef 93       	push	r30
+ 11e:	ff 93       	push	r31
+    TCB0.INTFLAGS = 1 << TCB_CAPT_bp;
+ 120:	81 e0       	ldi	r24, 0x01	; 1
+ 122:	80 93 86 0a 	sts	0x0A86, r24	; 0x800a86 <__TEXT_REGION_LENGTH__+0x7f4a86>
+	modbus_tick();
+ 126:	0e 94 52 02 	call	0x4a4	; 0x4a4 <modbus_tick>
+    tickcount++;
+ 12a:	80 91 02 28 	lds	r24, 0x2802	; 0x802802 <__data_end>
+ 12e:	8f 5f       	subi	r24, 0xFF	; 255
+ 130:	80 93 02 28 	sts	0x2802, r24	; 0x802802 <__data_end>
+    if (tickcount >= 5) {
+ 134:	80 91 02 28 	lds	r24, 0x2802	; 0x802802 <__data_end>
+ 138:	85 30       	cpi	r24, 0x05	; 5
+ 13a:	20 f0       	brcs	.+8      	; 0x144 <__EEPROM_REGION_LENGTH__+0x44>
+        tickcount = 0;
+ 13c:	10 92 02 28 	sts	0x2802, r1	; 0x802802 <__data_end>
+        INVERTER_tick();
+ 140:	0e 94 c2 01 	call	0x384	; 0x384 <INVERTER_tick>
+    }
+    
+}
+ 144:	ff 91       	pop	r31
+ 146:	ef 91       	pop	r30
+ 148:	bf 91       	pop	r27
+ 14a:	af 91       	pop	r26
+ 14c:	9f 91       	pop	r25
+ 14e:	8f 91       	pop	r24
+ 150:	7f 91       	pop	r23
+ 152:	6f 91       	pop	r22
+ 154:	5f 91       	pop	r21
+ 156:	4f 91       	pop	r20
+ 158:	3f 91       	pop	r19
+ 15a:	2f 91       	pop	r18
+ 15c:	0f 90       	pop	r0
+ 15e:	0f be       	out	0x3f, r0	; 63
+ 160:	0f 90       	pop	r0
+ 162:	1f 90       	pop	r1
+ 164:	18 95       	reti
+
+00000166 <tick_interupt_init>:
+void tick_interupt_init(void){
+    TCB0.CCMP = F_CPU / 5000;
+ 166:	e0 e8       	ldi	r30, 0x80	; 128
+ 168:	fa e0       	ldi	r31, 0x0A	; 10
+ 16a:	80 ed       	ldi	r24, 0xD0	; 208
+ 16c:	97 e0       	ldi	r25, 0x07	; 7
+ 16e:	84 87       	std	Z+12, r24	; 0x0c
+ 170:	95 87       	std	Z+13, r25	; 0x0d
+    TCB0.INTCTRL = 1 << TCB_CAPT_bp;
+ 172:	81 e0       	ldi	r24, 0x01	; 1
+ 174:	85 83       	std	Z+5, r24	; 0x05
+    TCB0.CTRLB = TCB_CNTMODE_INT_gc;
+ 176:	11 82       	std	Z+1, r1	; 0x01
+    TCB0.CTRLA = TCB_CLKSEL_CLKDIV1_gc | 1<< TCB_ENABLE_bp;
+ 178:	80 83       	st	Z, r24
+ 17a:	08 95       	ret
+
+0000017c <main>:
+}
+
+int main(void)
+{
+    _PROTECTED_WRITE(CLKCTRL.MCLKCTRLB, CLKCTRL_PDIV_2X_gc | CLKCTRL_PEN_bm);
+ 17c:	21 e0       	ldi	r18, 0x01	; 1
+ 17e:	30 e0       	ldi	r19, 0x00	; 0
+ 180:	88 ed       	ldi	r24, 0xD8	; 216
+ 182:	84 bf       	out	0x34, r24	; 52
+ 184:	20 93 61 00 	sts	0x0061, r18	; 0x800061 <__TEXT_REGION_LENGTH__+0x7f4061>
+    //USART0_init();
+    TCB1.CCMP = 0xffff;
+ 188:	e0 e9       	ldi	r30, 0x90	; 144
+ 18a:	fa e0       	ldi	r31, 0x0A	; 10
+ 18c:	8f ef       	ldi	r24, 0xFF	; 255
+ 18e:	9f ef       	ldi	r25, 0xFF	; 255
+ 190:	84 87       	std	Z+12, r24	; 0x0c
+ 192:	95 87       	std	Z+13, r25	; 0x0d
+    // TCB1.INTCTRL = 1 << TCB_CAPT_bp;
+    TCB1.CTRLB = TCB_CNTMODE_INT_gc;
+ 194:	11 82       	std	Z+1, r1	; 0x01
+    TCB1.CTRLA = TCB_CLKSEL_CLKDIV1_gc | 1<< TCB_ENABLE_bp;
+ 196:	81 e0       	ldi	r24, 0x01	; 1
+ 198:	80 83       	st	Z, r24
+    cli();
+ 19a:	f8 94       	cli
+    modbus_init();
+ 19c:	0e 94 4c 02 	call	0x498	; 0x498 <modbus_init>
+    tick_interupt_init();
+ 1a0:	0e 94 b3 00 	call	0x166	; 0x166 <tick_interupt_init>
+    INVERTER_init();
+ 1a4:	0e 94 bd 01 	call	0x37a	; 0x37a <INVERTER_init>
+    sei();
+ 1a8:	78 94       	sei
+    while (1) 
+    {
+        //USART0_sendString("Hello World!\r\n");
+        modbus_get();
+ 1aa:	0e 94 ee 01 	call	0x3dc	; 0x3dc <modbus_get>
+ 1ae:	fd cf       	rjmp	.-6      	; 0x1aa <main+0x2e>
+
+000001b0 <__vector_3>:
+ * \return Data register from USART_0 module
+ */
+uint8_t USART_1_get_data(void)
+{
+	return USART1.RXDATAL;
+}
+ 1b0:	1f 92       	push	r1
+ 1b2:	0f 92       	push	r0
+ 1b4:	0f b6       	in	r0, 0x3f	; 63
+ 1b6:	0f 92       	push	r0
+ 1b8:	11 24       	eor	r1, r1
+ 1ba:	8f 93       	push	r24
+ 1bc:	ef 93       	push	r30
+ 1be:	ff 93       	push	r31
+ 1c0:	80 91 43 01 	lds	r24, 0x0143	; 0x800143 <__TEXT_REGION_LENGTH__+0x7f4143>
+ 1c4:	81 ff       	sbrs	r24, 1
+ 1c6:	07 c0       	rjmp	.+14     	; 0x1d6 <__vector_3+0x26>
+ 1c8:	e0 e4       	ldi	r30, 0x40	; 64
+ 1ca:	f1 e0       	ldi	r31, 0x01	; 1
+ 1cc:	82 e0       	ldi	r24, 0x02	; 2
+ 1ce:	83 83       	std	Z+3, r24	; 0x03
+ 1d0:	82 81       	ldd	r24, Z+2	; 0x02
+ 1d2:	8d 7f       	andi	r24, 0xFD	; 253
+ 1d4:	82 83       	std	Z+2, r24	; 0x02
+ 1d6:	80 91 43 01 	lds	r24, 0x0143	; 0x800143 <__TEXT_REGION_LENGTH__+0x7f4143>
+ 1da:	80 ff       	sbrs	r24, 0
+ 1dc:	14 c0       	rjmp	.+40     	; 0x206 <__vector_3+0x56>
+ 1de:	ef e0       	ldi	r30, 0x0F	; 15
+ 1e0:	f8 e2       	ldi	r31, 0x28	; 40
+ 1e2:	85 a1       	ldd	r24, Z+37	; 0x25
+ 1e4:	8f 5f       	subi	r24, 0xFF	; 255
+ 1e6:	85 a3       	std	Z+37, r24	; 0x25
+ 1e8:	85 a1       	ldd	r24, Z+37	; 0x25
+ 1ea:	8c 33       	cpi	r24, 0x3C	; 60
+ 1ec:	48 f0       	brcs	.+18     	; 0x200 <__vector_3+0x50>
+ 1ee:	15 a2       	std	Z+37, r1	; 0x25
+ 1f0:	84 a1       	ldd	r24, Z+36	; 0x24
+ 1f2:	8f 5f       	subi	r24, 0xFF	; 255
+ 1f4:	84 a3       	std	Z+36, r24	; 0x24
+ 1f6:	84 a1       	ldd	r24, Z+36	; 0x24
+ 1f8:	88 31       	cpi	r24, 0x18	; 24
+ 1fa:	10 f0       	brcs	.+4      	; 0x200 <__vector_3+0x50>
+ 1fc:	10 92 33 28 	sts	0x2833, r1	; 0x802833 <Inverter+0x24>
+ 200:	81 e0       	ldi	r24, 0x01	; 1
+ 202:	80 93 43 01 	sts	0x0143, r24	; 0x800143 <__TEXT_REGION_LENGTH__+0x7f4143>
+ 206:	ff 91       	pop	r31
+ 208:	ef 91       	pop	r30
+ 20a:	8f 91       	pop	r24
+ 20c:	0f 90       	pop	r0
+ 20e:	0f be       	out	0x3f, r0	; 63
+ 210:	0f 90       	pop	r0
+ 212:	1f 90       	pop	r1
+ 214:	18 95       	reti
+
+00000216 <__vector_26>:
+ 216:	1f 92       	push	r1
+ 218:	0f 92       	push	r0
+ 21a:	0f b6       	in	r0, 0x3f	; 63
+ 21c:	0f 92       	push	r0
+ 21e:	11 24       	eor	r1, r1
+ 220:	2f 93       	push	r18
+ 222:	3f 93       	push	r19
+ 224:	8f 93       	push	r24
+ 226:	9f 93       	push	r25
+ 228:	af 93       	push	r26
+ 22a:	bf 93       	push	r27
+ 22c:	ef 93       	push	r30
+ 22e:	ff 93       	push	r31
+ 230:	80 91 05 28 	lds	r24, 0x2805	; 0x802805 <Inverter_Tick_count>
+ 234:	90 91 06 28 	lds	r25, 0x2806	; 0x802806 <Inverter_Tick_count+0x1>
+ 238:	20 91 37 28 	lds	r18, 0x2837	; 0x802837 <Inverter_last_bytetime>
+ 23c:	30 91 38 28 	lds	r19, 0x2838	; 0x802838 <Inverter_last_bytetime+0x1>
+ 240:	82 17       	cp	r24, r18
+ 242:	93 07       	cpc	r25, r19
+ 244:	38 f0       	brcs	.+14     	; 0x254 <__vector_26+0x3e>
+ 246:	20 91 37 28 	lds	r18, 0x2837	; 0x802837 <Inverter_last_bytetime>
+ 24a:	30 91 38 28 	lds	r19, 0x2838	; 0x802838 <Inverter_last_bytetime+0x1>
+ 24e:	82 1b       	sub	r24, r18
+ 250:	93 0b       	sbc	r25, r19
+ 252:	08 c0       	rjmp	.+16     	; 0x264 <__vector_26+0x4e>
+ 254:	20 91 37 28 	lds	r18, 0x2837	; 0x802837 <Inverter_last_bytetime>
+ 258:	30 91 38 28 	lds	r19, 0x2838	; 0x802838 <Inverter_last_bytetime+0x1>
+ 25c:	20 95       	com	r18
+ 25e:	30 95       	com	r19
+ 260:	82 0f       	add	r24, r18
+ 262:	93 1f       	adc	r25, r19
+ 264:	20 91 05 28 	lds	r18, 0x2805	; 0x802805 <Inverter_Tick_count>
+ 268:	30 91 06 28 	lds	r19, 0x2806	; 0x802806 <Inverter_Tick_count+0x1>
+ 26c:	20 93 37 28 	sts	0x2837, r18	; 0x802837 <Inverter_last_bytetime>
+ 270:	30 93 38 28 	sts	0x2838, r19	; 0x802838 <Inverter_last_bytetime+0x1>
+ 274:	02 97       	sbiw	r24, 0x02	; 2
+ 276:	60 f0       	brcs	.+24     	; 0x290 <__vector_26+0x7a>
+ 278:	80 91 24 28 	lds	r24, 0x2824	; 0x802824 <Inverter+0x15>
+ 27c:	88 23       	and	r24, r24
+ 27e:	19 f0       	breq	.+6      	; 0x286 <__vector_26+0x70>
+ 280:	81 e0       	ldi	r24, 0x01	; 1
+ 282:	80 93 36 28 	sts	0x2836, r24	; 0x802836 <Inverter_RX_Error>
+ 286:	10 92 24 28 	sts	0x2824, r1	; 0x802824 <Inverter+0x15>
+ 28a:	81 e0       	ldi	r24, 0x01	; 1
+ 28c:	80 93 03 28 	sts	0x2803, r24	; 0x802803 <Inverter_Com_stat>
+ 290:	af e0       	ldi	r26, 0x0F	; 15
+ 292:	b8 e2       	ldi	r27, 0x28	; 40
+ 294:	55 96       	adiw	r26, 0x15	; 21
+ 296:	ec 91       	ld	r30, X
+ 298:	55 97       	sbiw	r26, 0x15	; 21
+ 29a:	f0 e0       	ldi	r31, 0x00	; 0
+ 29c:	80 91 20 08 	lds	r24, 0x0820	; 0x800820 <__TEXT_REGION_LENGTH__+0x7f4820>
+ 2a0:	e1 5f       	subi	r30, 0xF1	; 241
+ 2a2:	f7 4d       	sbci	r31, 0xD7	; 215
+ 2a4:	80 83       	st	Z, r24
+ 2a6:	55 96       	adiw	r26, 0x15	; 21
+ 2a8:	8c 91       	ld	r24, X
+ 2aa:	55 97       	sbiw	r26, 0x15	; 21
+ 2ac:	8f 5f       	subi	r24, 0xFF	; 255
+ 2ae:	55 96       	adiw	r26, 0x15	; 21
+ 2b0:	8c 93       	st	X, r24
+ 2b2:	55 97       	sbiw	r26, 0x15	; 21
+ 2b4:	55 96       	adiw	r26, 0x15	; 21
+ 2b6:	8c 91       	ld	r24, X
+ 2b8:	84 31       	cpi	r24, 0x14	; 20
+ 2ba:	28 f0       	brcs	.+10     	; 0x2c6 <__vector_26+0xb0>
+ 2bc:	10 92 24 28 	sts	0x2824, r1	; 0x802824 <Inverter+0x15>
+ 2c0:	83 e0       	ldi	r24, 0x03	; 3
+ 2c2:	80 93 03 28 	sts	0x2803, r24	; 0x802803 <Inverter_Com_stat>
+ 2c6:	ff 91       	pop	r31
+ 2c8:	ef 91       	pop	r30
+ 2ca:	bf 91       	pop	r27
+ 2cc:	af 91       	pop	r26
+ 2ce:	9f 91       	pop	r25
+ 2d0:	8f 91       	pop	r24
+ 2d2:	3f 91       	pop	r19
+ 2d4:	2f 91       	pop	r18
+ 2d6:	0f 90       	pop	r0
+ 2d8:	0f be       	out	0x3f, r0	; 63
+ 2da:	0f 90       	pop	r0
+ 2dc:	1f 90       	pop	r1
+ 2de:	18 95       	reti
+
+000002e0 <__vector_27>:
+ 2e0:	1f 92       	push	r1
+ 2e2:	0f 92       	push	r0
+ 2e4:	0f b6       	in	r0, 0x3f	; 63
+ 2e6:	0f 92       	push	r0
+ 2e8:	11 24       	eor	r1, r1
+ 2ea:	8f 93       	push	r24
+ 2ec:	ef 93       	push	r30
+ 2ee:	ff 93       	push	r31
+ 2f0:	ef e0       	ldi	r30, 0x0F	; 15
+ 2f2:	f8 e2       	ldi	r31, 0x28	; 40
+ 2f4:	86 a1       	ldd	r24, Z+38	; 0x26
+ 2f6:	8f 5f       	subi	r24, 0xFF	; 255
+ 2f8:	86 a3       	std	Z+38, r24	; 0x26
+ 2fa:	86 a1       	ldd	r24, Z+38	; 0x26
+ 2fc:	84 31       	cpi	r24, 0x14	; 20
+ 2fe:	48 f4       	brcc	.+18     	; 0x312 <__vector_27+0x32>
+ 300:	e0 91 35 28 	lds	r30, 0x2835	; 0x802835 <Inverter+0x26>
+ 304:	f0 e0       	ldi	r31, 0x00	; 0
+ 306:	e1 5f       	subi	r30, 0xF1	; 241
+ 308:	f7 4d       	sbci	r31, 0xD7	; 215
+ 30a:	86 89       	ldd	r24, Z+22	; 0x16
+ 30c:	80 93 22 08 	sts	0x0822, r24	; 0x800822 <__TEXT_REGION_LENGTH__+0x7f4822>
+ 310:	08 c0       	rjmp	.+16     	; 0x322 <__vector_27+0x42>
+ 312:	e0 e2       	ldi	r30, 0x20	; 32
+ 314:	f8 e0       	ldi	r31, 0x08	; 8
+ 316:	85 81       	ldd	r24, Z+5	; 0x05
+ 318:	8f 7d       	andi	r24, 0xDF	; 223
+ 31a:	85 83       	std	Z+5, r24	; 0x05
+ 31c:	84 e0       	ldi	r24, 0x04	; 4
+ 31e:	80 93 03 28 	sts	0x2803, r24	; 0x802803 <Inverter_Com_stat>
+ 322:	ff 91       	pop	r31
+ 324:	ef 91       	pop	r30
+ 326:	8f 91       	pop	r24
+ 328:	0f 90       	pop	r0
+ 32a:	0f be       	out	0x3f, r0	; 63
+ 32c:	0f 90       	pop	r0
+ 32e:	1f 90       	pop	r1
+ 330:	18 95       	reti
+
+00000332 <RTC_0_init>:
+ 332:	e0 e4       	ldi	r30, 0x40	; 64
+ 334:	f1 e0       	ldi	r31, 0x01	; 1
+ 336:	81 81       	ldd	r24, Z+1	; 0x01
+ 338:	81 11       	cpse	r24, r1
+ 33a:	fd cf       	rjmp	.-6      	; 0x336 <RTC_0_init+0x4>
+ 33c:	e0 e4       	ldi	r30, 0x40	; 64
+ 33e:	f1 e0       	ldi	r31, 0x01	; 1
+ 340:	89 ea       	ldi	r24, 0xA9	; 169
+ 342:	80 83       	st	Z, r24
+ 344:	8f ef       	ldi	r24, 0xFF	; 255
+ 346:	9f ee       	ldi	r25, 0xEF	; 239
+ 348:	82 87       	std	Z+10, r24	; 0x0a
+ 34a:	93 87       	std	Z+11, r25	; 0x0b
+ 34c:	81 e0       	ldi	r24, 0x01	; 1
+ 34e:	85 83       	std	Z+5, r24	; 0x05
+ 350:	82 83       	std	Z+2, r24	; 0x02
+ 352:	08 95       	ret
+
+00000354 <USART_1_init>:
+ 354:	e0 e4       	ldi	r30, 0x40	; 64
+ 356:	f4 e0       	ldi	r31, 0x04	; 4
+ 358:	81 e0       	ldi	r24, 0x01	; 1
+ 35a:	81 83       	std	Z+1, r24	; 0x01
+ 35c:	15 82       	std	Z+5, r1	; 0x05
+ 35e:	88 e0       	ldi	r24, 0x08	; 8
+ 360:	81 83       	std	Z+1, r24	; 0x01
+ 362:	15 82       	std	Z+5, r1	; 0x05
+ 364:	e0 e2       	ldi	r30, 0x20	; 32
+ 366:	f8 e0       	ldi	r31, 0x08	; 8
+ 368:	83 e2       	ldi	r24, 0x23	; 35
+ 36a:	98 e0       	ldi	r25, 0x08	; 8
+ 36c:	80 87       	std	Z+8, r24	; 0x08
+ 36e:	91 87       	std	Z+9, r25	; 0x09
+ 370:	81 e8       	ldi	r24, 0x81	; 129
+ 372:	85 83       	std	Z+5, r24	; 0x05
+ 374:	80 ec       	ldi	r24, 0xC0	; 192
+ 376:	86 83       	std	Z+6, r24	; 0x06
+ 378:	08 95       	ret
+
+0000037a <INVERTER_init>:
+
+void INVERTER_init(void){
+    USART_1_init();
+ 37a:	0e 94 aa 01 	call	0x354	; 0x354 <USART_1_init>
+    RTC_0_init();
+ 37e:	0e 94 99 01 	call	0x332	; 0x332 <RTC_0_init>
+ 382:	08 95       	ret
+
+00000384 <INVERTER_tick>:
+}
+
+void INVERTER_tick(void){
+    Inverter_Tick_count++;
+ 384:	80 91 05 28 	lds	r24, 0x2805	; 0x802805 <Inverter_Tick_count>
+ 388:	90 91 06 28 	lds	r25, 0x2806	; 0x802806 <Inverter_Tick_count+0x1>
+ 38c:	01 96       	adiw	r24, 0x01	; 1
+ 38e:	80 93 05 28 	sts	0x2805, r24	; 0x802805 <Inverter_Tick_count>
+ 392:	90 93 06 28 	sts	0x2806, r25	; 0x802806 <Inverter_Tick_count+0x1>
+    
+    switch (Inverter_Com_stat){
+ 396:	80 91 03 28 	lds	r24, 0x2803	; 0x802803 <Inverter_Com_stat>
+ 39a:	83 30       	cpi	r24, 0x03	; 3
+ 39c:	19 f0       	breq	.+6      	; 0x3a4 <INVERTER_tick+0x20>
+ 39e:	84 30       	cpi	r24, 0x04	; 4
+ 3a0:	d1 f0       	breq	.+52     	; 0x3d6 <INVERTER_tick+0x52>
+ 3a2:	08 95       	ret
+        case RXComplete: {
+            Inverter_Com_count++;
+ 3a4:	80 91 04 28 	lds	r24, 0x2804	; 0x802804 <Inverter_Com_count>
+ 3a8:	8f 5f       	subi	r24, 0xFF	; 255
+ 3aa:	80 93 04 28 	sts	0x2804, r24	; 0x802804 <Inverter_Com_count>
+            if (Inverter_Com_count >= 10) {
+ 3ae:	80 91 04 28 	lds	r24, 0x2804	; 0x802804 <Inverter_Com_count>
+ 3b2:	8a 30       	cpi	r24, 0x0A	; 10
+ 3b4:	90 f0       	brcs	.+36     	; 0x3da <INVERTER_tick+0x56>
+                Inverter_Com_count=0;
+ 3b6:	10 92 04 28 	sts	0x2804, r1	; 0x802804 <Inverter_Com_count>
+                Inverter_Com_stat=TXActive;
+ 3ba:	82 e0       	ldi	r24, 0x02	; 2
+ 3bc:	80 93 03 28 	sts	0x2803, r24	; 0x802803 <Inverter_Com_stat>
+                Inverter.TX_Array_index=0;
+ 3c0:	ef e0       	ldi	r30, 0x0F	; 15
+ 3c2:	f8 e2       	ldi	r31, 0x28	; 40
+ 3c4:	16 a2       	std	Z+38, r1	; 0x26
+                USART1.TXDATAL = Inverter.TX.Array[0];
+ 3c6:	86 89       	ldd	r24, Z+22	; 0x16
+ 3c8:	e0 e2       	ldi	r30, 0x20	; 32
+ 3ca:	f8 e0       	ldi	r31, 0x08	; 8
+ 3cc:	82 83       	std	Z+2, r24	; 0x02
+            
+                USART1.CTRLA |= 1 << USART_DREIE_bp;
+ 3ce:	85 81       	ldd	r24, Z+5	; 0x05
+ 3d0:	80 62       	ori	r24, 0x20	; 32
+ 3d2:	85 83       	std	Z+5, r24	; 0x05
+ 3d4:	08 95       	ret
+            }
+        } break;
+        
+        case TXComplete: {
+            Inverter_Com_stat=RXStandby;
+ 3d6:	10 92 03 28 	sts	0x2803, r1	; 0x802803 <Inverter_Com_stat>
+ 3da:	08 95       	ret
+
+000003dc <modbus_get>:
+	DDRB |= (1<<0)|(1<<1)|(1<<2)|(1<<3);
+}
+*/
+
+void modbus_get(void) {
+	if (modbusGetBusState() & (1<<ReceiveCompleted))
+ 3dc:	0e 94 55 02 	call	0x4aa	; 0x4aa <modbusGetBusState>
+ 3e0:	83 ff       	sbrs	r24, 3
+ 3e2:	59 c0       	rjmp	.+178    	; 0x496 <__LOCK_REGION_LENGTH__+0x96>
+	{
+		switch(rxbuffer[1]) {
+ 3e4:	e0 91 4a 28 	lds	r30, 0x284A	; 0x80284a <rxbuffer+0x1>
+ 3e8:	8e 2f       	mov	r24, r30
+ 3ea:	90 e0       	ldi	r25, 0x00	; 0
+ 3ec:	fc 01       	movw	r30, r24
+ 3ee:	31 97       	sbiw	r30, 0x01	; 1
+ 3f0:	e0 31       	cpi	r30, 0x10	; 16
+ 3f2:	f1 05       	cpc	r31, r1
+ 3f4:	08 f0       	brcs	.+2      	; 0x3f8 <modbus_get+0x1c>
+ 3f6:	4c c0       	rjmp	.+152    	; 0x490 <__LOCK_REGION_LENGTH__+0x90>
+ 3f8:	e0 5b       	subi	r30, 0xB0	; 176
+ 3fa:	ff 4f       	sbci	r31, 0xFF	; 255
+ 3fc:	0c 94 ec 05 	jmp	0xbd8	; 0xbd8 <__tablejump2__>
+			case fcReadCoilStatus: {
+				modbusExchangeBits(&outstate,0,8);
+ 400:	48 e0       	ldi	r20, 0x08	; 8
+ 402:	50 e0       	ldi	r21, 0x00	; 0
+ 404:	60 e0       	ldi	r22, 0x00	; 0
+ 406:	70 e0       	ldi	r23, 0x00	; 0
+ 408:	88 e0       	ldi	r24, 0x08	; 8
+ 40a:	98 e2       	ldi	r25, 0x28	; 40
+ 40c:	0e 94 21 05 	call	0xa42	; 0xa42 <modbusExchangeBits>
+			}
+			break;
+ 410:	08 95       	ret
+			
+			case fcReadInputStatus: {
+				//volatile uint8_t inps = ReadIns();
+				modbusExchangeBits(&ins,0,8);
+ 412:	48 e0       	ldi	r20, 0x08	; 8
+ 414:	50 e0       	ldi	r21, 0x00	; 0
+ 416:	60 e0       	ldi	r22, 0x00	; 0
+ 418:	70 e0       	ldi	r23, 0x00	; 0
+ 41a:	87 e0       	ldi	r24, 0x07	; 7
+ 41c:	98 e2       	ldi	r25, 0x28	; 40
+ 41e:	0e 94 21 05 	call	0xa42	; 0xa42 <modbusExchangeBits>
+			}
+			break;
+ 422:	08 95       	ret
+			
+			case fcReadHoldingRegisters: {
+				modbusExchangeRegisters(holdingRegisters,0,4);
+ 424:	44 e0       	ldi	r20, 0x04	; 4
+ 426:	50 e0       	ldi	r21, 0x00	; 0
+ 428:	60 e0       	ldi	r22, 0x00	; 0
+ 42a:	70 e0       	ldi	r23, 0x00	; 0
+ 42c:	89 e3       	ldi	r24, 0x39	; 57
+ 42e:	98 e2       	ldi	r25, 0x28	; 40
+ 430:	0e 94 81 04 	call	0x902	; 0x902 <modbusExchangeRegisters>
+			}
+			break;
+ 434:	08 95       	ret
+			
+			case fcReadInputRegisters: {
+				modbusExchangeRegisters(inputRegisters,0,4);
+ 436:	44 e0       	ldi	r20, 0x04	; 4
+ 438:	50 e0       	ldi	r21, 0x00	; 0
+ 43a:	60 e0       	ldi	r22, 0x00	; 0
+ 43c:	70 e0       	ldi	r23, 0x00	; 0
+ 43e:	81 e4       	ldi	r24, 0x41	; 65
+ 440:	98 e2       	ldi	r25, 0x28	; 40
+ 442:	0e 94 81 04 	call	0x902	; 0x902 <modbusExchangeRegisters>
+			}
+			break;
+ 446:	08 95       	ret
+			
+			case fcForceSingleCoil: {
+				modbusExchangeBits(&outstate,0,8);
+ 448:	48 e0       	ldi	r20, 0x08	; 8
+ 44a:	50 e0       	ldi	r21, 0x00	; 0
+ 44c:	60 e0       	ldi	r22, 0x00	; 0
+ 44e:	70 e0       	ldi	r23, 0x00	; 0
+ 450:	88 e0       	ldi	r24, 0x08	; 8
+ 452:	98 e2       	ldi	r25, 0x28	; 40
+ 454:	0e 94 21 05 	call	0xa42	; 0xa42 <modbusExchangeBits>
+				//SetOuts(outstate);
+			}
+			break;
+ 458:	08 95       	ret
+			
+			case fcPresetSingleRegister: {
+				modbusExchangeRegisters(holdingRegisters,0,4);
+ 45a:	44 e0       	ldi	r20, 0x04	; 4
+ 45c:	50 e0       	ldi	r21, 0x00	; 0
+ 45e:	60 e0       	ldi	r22, 0x00	; 0
+ 460:	70 e0       	ldi	r23, 0x00	; 0
+ 462:	89 e3       	ldi	r24, 0x39	; 57
+ 464:	98 e2       	ldi	r25, 0x28	; 40
+ 466:	0e 94 81 04 	call	0x902	; 0x902 <modbusExchangeRegisters>
+			}
+			break;
+ 46a:	08 95       	ret
+			
+			case fcForceMultipleCoils: {
+				modbusExchangeBits(&outstate,0,8);
+ 46c:	48 e0       	ldi	r20, 0x08	; 8
+ 46e:	50 e0       	ldi	r21, 0x00	; 0
+ 470:	60 e0       	ldi	r22, 0x00	; 0
+ 472:	70 e0       	ldi	r23, 0x00	; 0
+ 474:	88 e0       	ldi	r24, 0x08	; 8
+ 476:	98 e2       	ldi	r25, 0x28	; 40
+ 478:	0e 94 21 05 	call	0xa42	; 0xa42 <modbusExchangeBits>
+				//SetOuts(outstate);
+			}
+			break;
+ 47c:	08 95       	ret
+			
+			case fcPresetMultipleRegisters: {
+				modbusExchangeRegisters(holdingRegisters,0,4);
+ 47e:	44 e0       	ldi	r20, 0x04	; 4
+ 480:	50 e0       	ldi	r21, 0x00	; 0
+ 482:	60 e0       	ldi	r22, 0x00	; 0
+ 484:	70 e0       	ldi	r23, 0x00	; 0
+ 486:	89 e3       	ldi	r24, 0x39	; 57
+ 488:	98 e2       	ldi	r25, 0x28	; 40
+ 48a:	0e 94 81 04 	call	0x902	; 0x902 <modbusExchangeRegisters>
+			}
+			break;
+ 48e:	08 95       	ret
+			
+			default: {
+				modbusSendException(ecIllegalFunction);
+ 490:	81 e0       	ldi	r24, 0x01	; 1
+ 492:	0e 94 41 04 	call	0x882	; 0x882 <modbusSendException>
+ 496:	08 95       	ret
+
+00000498 <modbus_init>:
+}
+
+void modbus_init(void)
+{
+	//io_conf();
+	modbusSetAddress(clientAddress);
+ 498:	81 e0       	ldi	r24, 0x01	; 1
+ 49a:	0e 94 58 02 	call	0x4b0	; 0x4b0 <modbusSetAddress>
+	modbusInit();
+ 49e:	0e 94 10 04 	call	0x820	; 0x820 <modbusInit>
+ 4a2:	08 95       	ret
+
+000004a4 <modbus_tick>:
+}
+
+void modbus_tick(void)
+{
+	    modbusTickTimer();
+ 4a4:	0e 94 ea 02 	call	0x5d4	; 0x5d4 <modbusTickTimer>
+ 4a8:	08 95       	ret
+
+000004aa <modbusGetBusState>:
+*          amount must not be bigger than 255...
+*
+*/
+void listRegisterCopy(volatile uint8_t *source, volatile uint8_t *target, uint8_t amount)
+{
+	for (uint8_t c=0; c<amount; c++)
+ 4aa:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 4ae:	08 95       	ret
+
+000004b0 <modbusSetAddress>:
+ 4b0:	80 93 09 28 	sts	0x2809, r24	; 0x802809 <Address>
+ 4b4:	08 95       	ret
+
+000004b6 <crc16>:
+ 4b6:	cf 93       	push	r28
+ 4b8:	df 93       	push	r29
+ 4ba:	ec 01       	movw	r28, r24
+ 4bc:	6f 5f       	subi	r22, 0xFF	; 255
+ 4be:	d9 f0       	breq	.+54     	; 0x4f6 <crc16+0x40>
+ 4c0:	fc 01       	movw	r30, r24
+ 4c2:	dc 01       	movw	r26, r24
+ 4c4:	a6 0f       	add	r26, r22
+ 4c6:	b1 1d       	adc	r27, r1
+ 4c8:	2f ef       	ldi	r18, 0xFF	; 255
+ 4ca:	3f ef       	ldi	r19, 0xFF	; 255
+ 4cc:	90 81       	ld	r25, Z
+ 4ce:	29 27       	eor	r18, r25
+ 4d0:	98 e0       	ldi	r25, 0x08	; 8
+ 4d2:	a9 01       	movw	r20, r18
+ 4d4:	41 70       	andi	r20, 0x01	; 1
+ 4d6:	55 27       	eor	r21, r21
+ 4d8:	36 95       	lsr	r19
+ 4da:	27 95       	ror	r18
+ 4dc:	45 2b       	or	r20, r21
+ 4de:	21 f0       	breq	.+8      	; 0x4e8 <crc16+0x32>
+ 4e0:	81 e0       	ldi	r24, 0x01	; 1
+ 4e2:	28 27       	eor	r18, r24
+ 4e4:	80 ea       	ldi	r24, 0xA0	; 160
+ 4e6:	38 27       	eor	r19, r24
+ 4e8:	91 50       	subi	r25, 0x01	; 1
+ 4ea:	99 f7       	brne	.-26     	; 0x4d2 <crc16+0x1c>
+ 4ec:	31 96       	adiw	r30, 0x01	; 1
+ 4ee:	ea 17       	cp	r30, r26
+ 4f0:	fb 07       	cpc	r31, r27
+ 4f2:	61 f7       	brne	.-40     	; 0x4cc <crc16+0x16>
+ 4f4:	02 c0       	rjmp	.+4      	; 0x4fa <crc16+0x44>
+ 4f6:	2f ef       	ldi	r18, 0xFF	; 255
+ 4f8:	3f ef       	ldi	r19, 0xFF	; 255
+ 4fa:	46 2f       	mov	r20, r22
+ 4fc:	50 e0       	ldi	r21, 0x00	; 0
+ 4fe:	fe 01       	movw	r30, r28
+ 500:	e4 0f       	add	r30, r20
+ 502:	f5 1f       	adc	r31, r21
+ 504:	80 81       	ld	r24, Z
+ 506:	90 e0       	ldi	r25, 0x00	; 0
+ 508:	b9 01       	movw	r22, r18
+ 50a:	77 27       	eor	r23, r23
+ 50c:	86 17       	cp	r24, r22
+ 50e:	97 07       	cpc	r25, r23
+ 510:	59 f4       	brne	.+22     	; 0x528 <crc16+0x72>
+ 512:	da 01       	movw	r26, r20
+ 514:	11 96       	adiw	r26, 0x01	; 1
+ 516:	ac 0f       	add	r26, r28
+ 518:	bd 1f       	adc	r27, r29
+ 51a:	8c 91       	ld	r24, X
+ 51c:	90 e0       	ldi	r25, 0x00	; 0
+ 51e:	63 2f       	mov	r22, r19
+ 520:	77 27       	eor	r23, r23
+ 522:	86 17       	cp	r24, r22
+ 524:	97 07       	cpc	r25, r23
+ 526:	49 f0       	breq	.+18     	; 0x53a <crc16+0x84>
+ 528:	20 83       	st	Z, r18
+ 52a:	4f 5f       	subi	r20, 0xFF	; 255
+ 52c:	5f 4f       	sbci	r21, 0xFF	; 255
+ 52e:	fe 01       	movw	r30, r28
+ 530:	e4 0f       	add	r30, r20
+ 532:	f5 1f       	adc	r31, r21
+ 534:	30 83       	st	Z, r19
+ 536:	80 e0       	ldi	r24, 0x00	; 0
+ 538:	01 c0       	rjmp	.+2      	; 0x53c <crc16+0x86>
+ 53a:	81 e0       	ldi	r24, 0x01	; 1
+ 53c:	df 91       	pop	r29
+ 53e:	cf 91       	pop	r28
+ 540:	08 95       	ret
+
+00000542 <listBitCopy>:
+*
+*
+*/
+void listBitCopy(volatile uint8_t *source, uint16_t sourceNr,volatile uint8_t *target, uint16_t targetNr)
+{
+	if(*(source+(sourceNr/8))&(1<<(sourceNr-((sourceNr/8)*8))))
+ 542:	fb 01       	movw	r30, r22
+ 544:	f6 95       	lsr	r31
+ 546:	e7 95       	ror	r30
+ 548:	f6 95       	lsr	r31
+ 54a:	e7 95       	ror	r30
+ 54c:	f6 95       	lsr	r31
+ 54e:	e7 95       	ror	r30
+ 550:	e8 0f       	add	r30, r24
+ 552:	f9 1f       	adc	r31, r25
+ 554:	80 81       	ld	r24, Z
+ 556:	90 e0       	ldi	r25, 0x00	; 0
+ 558:	67 70       	andi	r22, 0x07	; 7
+ 55a:	77 27       	eor	r23, r23
+ 55c:	02 c0       	rjmp	.+4      	; 0x562 <listBitCopy+0x20>
+ 55e:	95 95       	asr	r25
+ 560:	87 95       	ror	r24
+ 562:	6a 95       	dec	r22
+ 564:	e2 f7       	brpl	.-8      	; 0x55e <listBitCopy+0x1c>
+ 566:	80 ff       	sbrs	r24, 0
+ 568:	16 c0       	rjmp	.+44     	; 0x596 <listBitCopy+0x54>
+	{
+		*(target+(targetNr/8))|=(1<<(targetNr-((targetNr/8)*8)));
+ 56a:	f9 01       	movw	r30, r18
+ 56c:	f6 95       	lsr	r31
+ 56e:	e7 95       	ror	r30
+ 570:	f6 95       	lsr	r31
+ 572:	e7 95       	ror	r30
+ 574:	f6 95       	lsr	r31
+ 576:	e7 95       	ror	r30
+ 578:	e4 0f       	add	r30, r20
+ 57a:	f5 1f       	adc	r31, r21
+ 57c:	40 81       	ld	r20, Z
+ 57e:	27 70       	andi	r18, 0x07	; 7
+ 580:	33 27       	eor	r19, r19
+ 582:	81 e0       	ldi	r24, 0x01	; 1
+ 584:	90 e0       	ldi	r25, 0x00	; 0
+ 586:	02 c0       	rjmp	.+4      	; 0x58c <listBitCopy+0x4a>
+ 588:	88 0f       	add	r24, r24
+ 58a:	99 1f       	adc	r25, r25
+ 58c:	2a 95       	dec	r18
+ 58e:	e2 f7       	brpl	.-8      	; 0x588 <listBitCopy+0x46>
+ 590:	84 2b       	or	r24, r20
+ 592:	80 83       	st	Z, r24
+ 594:	08 95       	ret
+	} else *(target+(targetNr/8))&=~(1<<(targetNr-((targetNr/8)*8)));
+ 596:	f9 01       	movw	r30, r18
+ 598:	f6 95       	lsr	r31
+ 59a:	e7 95       	ror	r30
+ 59c:	f6 95       	lsr	r31
+ 59e:	e7 95       	ror	r30
+ 5a0:	f6 95       	lsr	r31
+ 5a2:	e7 95       	ror	r30
+ 5a4:	e4 0f       	add	r30, r20
+ 5a6:	f5 1f       	adc	r31, r21
+ 5a8:	40 81       	ld	r20, Z
+ 5aa:	27 70       	andi	r18, 0x07	; 7
+ 5ac:	33 27       	eor	r19, r19
+ 5ae:	81 e0       	ldi	r24, 0x01	; 1
+ 5b0:	90 e0       	ldi	r25, 0x00	; 0
+ 5b2:	02 c0       	rjmp	.+4      	; 0x5b8 <listBitCopy+0x76>
+ 5b4:	88 0f       	add	r24, r24
+ 5b6:	99 1f       	adc	r25, r25
+ 5b8:	2a 95       	dec	r18
+ 5ba:	e2 f7       	brpl	.-8      	; 0x5b4 <listBitCopy+0x72>
+ 5bc:	80 95       	com	r24
+ 5be:	84 23       	and	r24, r20
+ 5c0:	80 83       	st	Z, r24
+ 5c2:	08 95       	ret
+
+000005c4 <modbusReset>:
+/* @brief: Back to receiving state.
+*
+*/
+void modbusReset(void)
+{
+	BusState=(1<<TimerActive); //stop receiving (error)
+ 5c4:	80 e2       	ldi	r24, 0x20	; 32
+ 5c6:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+	modbusTimer=0;
+ 5ca:	10 92 0a 28 	sts	0x280A, r1	; 0x80280a <modbusTimer>
+ 5ce:	10 92 0b 28 	sts	0x280B, r1	; 0x80280b <modbusTimer+0x1>
+ 5d2:	08 95       	ret
+
+000005d4 <modbusTickTimer>:
+}
+
+void modbusTickTimer(void)
+{
+	if (BusState&(1<<TimerActive)) 
+ 5d4:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 5d8:	85 ff       	sbrs	r24, 5
+ 5da:	41 c0       	rjmp	.+130    	; 0x65e <modbusTickTimer+0x8a>
+	{
+		modbusTimer++;
+ 5dc:	80 91 0a 28 	lds	r24, 0x280A	; 0x80280a <modbusTimer>
+ 5e0:	90 91 0b 28 	lds	r25, 0x280B	; 0x80280b <modbusTimer+0x1>
+ 5e4:	01 96       	adiw	r24, 0x01	; 1
+ 5e6:	80 93 0a 28 	sts	0x280A, r24	; 0x80280a <modbusTimer>
+ 5ea:	90 93 0b 28 	sts	0x280B, r25	; 0x80280b <modbusTimer+0x1>
+		if (BusState&(1<<Receiving)) //we are in receiving mode
+ 5ee:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 5f2:	81 ff       	sbrs	r24, 1
+ 5f4:	29 c0       	rjmp	.+82     	; 0x648 <modbusTickTimer+0x74>
+		{
+			if ((modbusTimer==modbusInterCharTimeout)) {
+ 5f6:	80 91 0a 28 	lds	r24, 0x280A	; 0x80280a <modbusTimer>
+ 5fa:	90 91 0b 28 	lds	r25, 0x280B	; 0x80280b <modbusTimer+0x1>
+ 5fe:	07 97       	sbiw	r24, 0x07	; 7
+ 600:	31 f4       	brne	.+12     	; 0x60e <modbusTickTimer+0x3a>
+				BusState|=(1<<GapDetected);
+ 602:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 606:	80 64       	ori	r24, 0x40	; 64
+ 608:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+ 60c:	08 95       	ret
+			} else if ((modbusTimer==modbusInterFrameDelayReceiveEnd)) { //end of message
+ 60e:	80 91 0a 28 	lds	r24, 0x280A	; 0x80280a <modbusTimer>
+ 612:	90 91 0b 28 	lds	r25, 0x280B	; 0x80280b <modbusTimer+0x1>
+ 616:	42 97       	sbiw	r24, 0x12	; 18
+ 618:	11 f5       	brne	.+68     	; 0x65e <modbusTickTimer+0x8a>
+				BusState=(1<<ReceiveCompleted);
+ 61a:	88 e0       	ldi	r24, 0x08	; 8
+ 61c:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+				#if ADDRESS_MODE == MULTIPLE_ADR
+               		 if (crc16(rxbuffer,DataPos-3)) { //perform crc check only. This is for multiple/all address mode.
+                	} else modbusReset();
+				#endif
+				#if ADDRESS_MODE == SINGLE_ADR
+				if (rxbuffer[0]==Address && crc16(rxbuffer,DataPos-3)) { //is the message for us? => perform crc check
+ 620:	90 91 49 28 	lds	r25, 0x2849	; 0x802849 <rxbuffer>
+ 624:	80 91 09 28 	lds	r24, 0x2809	; 0x802809 <Address>
+ 628:	98 13       	cpse	r25, r24
+ 62a:	0b c0       	rjmp	.+22     	; 0x642 <modbusTickTimer+0x6e>
+ 62c:	60 91 0d 28 	lds	r22, 0x280D	; 0x80280d <DataPos>
+ 630:	70 91 0e 28 	lds	r23, 0x280E	; 0x80280e <DataPos+0x1>
+ 634:	63 50       	subi	r22, 0x03	; 3
+ 636:	89 e4       	ldi	r24, 0x49	; 73
+ 638:	98 e2       	ldi	r25, 0x28	; 40
+ 63a:	0e 94 5b 02 	call	0x4b6	; 0x4b6 <crc16>
+ 63e:	81 11       	cpse	r24, r1
+ 640:	0e c0       	rjmp	.+28     	; 0x65e <modbusTickTimer+0x8a>
+				} else modbusReset();
+ 642:	0e 94 e2 02 	call	0x5c4	; 0x5c4 <modbusReset>
+ 646:	08 95       	ret
+				#endif
+			}	
+		} else if (modbusTimer==modbusInterFrameDelayReceiveStart) BusState|=(1<<BusTimedOut);
+ 648:	80 91 0a 28 	lds	r24, 0x280A	; 0x80280a <modbusTimer>
+ 64c:	90 91 0b 28 	lds	r25, 0x280B	; 0x80280b <modbusTimer+0x1>
+ 650:	40 97       	sbiw	r24, 0x10	; 16
+ 652:	29 f4       	brne	.+10     	; 0x65e <modbusTickTimer+0x8a>
+ 654:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 658:	81 60       	ori	r24, 0x01	; 1
+ 65a:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+ 65e:	08 95       	ret
+
+00000660 <__vector_17>:
+	}
+}
+
+ISR(UART_RECEIVE_INTERRUPT)
+{
+ 660:	1f 92       	push	r1
+ 662:	0f 92       	push	r0
+ 664:	0f b6       	in	r0, 0x3f	; 63
+ 666:	0f 92       	push	r0
+ 668:	11 24       	eor	r1, r1
+ 66a:	2f 93       	push	r18
+ 66c:	3f 93       	push	r19
+ 66e:	4f 93       	push	r20
+ 670:	5f 93       	push	r21
+ 672:	6f 93       	push	r22
+ 674:	7f 93       	push	r23
+ 676:	8f 93       	push	r24
+ 678:	9f 93       	push	r25
+ 67a:	af 93       	push	r26
+ 67c:	bf 93       	push	r27
+ 67e:	ef 93       	push	r30
+ 680:	ff 93       	push	r31
+	unsigned char data;
+#ifdef USART_NUMBER
+    data = UART_RXDATA;
+ 682:	90 91 00 08 	lds	r25, 0x0800	; 0x800800 <__TEXT_REGION_LENGTH__+0x7f4800>
+#else
+	data = UART_DATA;
+#endif
+	modbusTimer=0; //reset timer
+ 686:	10 92 0a 28 	sts	0x280A, r1	; 0x80280a <modbusTimer>
+ 68a:	10 92 0b 28 	sts	0x280B, r1	; 0x80280b <modbusTimer+0x1>
+	if (!(BusState & (1<<ReceiveCompleted)) && !(BusState & (1<<TransmitRequested)) && !(BusState & (1<<Transmitting)) && (BusState & (1<<Receiving)) && !(BusState & (1<<BusTimedOut)))
+ 68e:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 692:	83 fd       	sbrc	r24, 3
+ 694:	2c c0       	rjmp	.+88     	; 0x6ee <__vector_17+0x8e>
+ 696:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 69a:	84 fd       	sbrc	r24, 4
+ 69c:	28 c0       	rjmp	.+80     	; 0x6ee <__vector_17+0x8e>
+ 69e:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 6a2:	82 fd       	sbrc	r24, 2
+ 6a4:	24 c0       	rjmp	.+72     	; 0x6ee <__vector_17+0x8e>
+ 6a6:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 6aa:	81 ff       	sbrs	r24, 1
+ 6ac:	20 c0       	rjmp	.+64     	; 0x6ee <__vector_17+0x8e>
+ 6ae:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 6b2:	80 fd       	sbrc	r24, 0
+ 6b4:	1c c0       	rjmp	.+56     	; 0x6ee <__vector_17+0x8e>
+	{
+		if (DataPos>MaxFrameIndex) modbusReset();
+ 6b6:	20 91 0d 28 	lds	r18, 0x280D	; 0x80280d <DataPos>
+ 6ba:	30 91 0e 28 	lds	r19, 0x280E	; 0x80280e <DataPos+0x1>
+ 6be:	2f 3f       	cpi	r18, 0xFF	; 255
+ 6c0:	31 05       	cpc	r19, r1
+ 6c2:	21 f0       	breq	.+8      	; 0x6cc <__vector_17+0x6c>
+ 6c4:	18 f0       	brcs	.+6      	; 0x6cc <__vector_17+0x6c>
+ 6c6:	0e 94 e2 02 	call	0x5c4	; 0x5c4 <modbusReset>
+ 6ca:	30 c0       	rjmp	.+96     	; 0x72c <__vector_17+0xcc>
+	    	else
+		{
+			rxbuffer[DataPos]=data;
+ 6cc:	e0 91 0d 28 	lds	r30, 0x280D	; 0x80280d <DataPos>
+ 6d0:	f0 91 0e 28 	lds	r31, 0x280E	; 0x80280e <DataPos+0x1>
+ 6d4:	e7 5b       	subi	r30, 0xB7	; 183
+ 6d6:	f7 4d       	sbci	r31, 0xD7	; 215
+ 6d8:	90 83       	st	Z, r25
+			DataPos++; //TODO: maybe prevent this from exceeding 255?
+ 6da:	80 91 0d 28 	lds	r24, 0x280D	; 0x80280d <DataPos>
+ 6de:	90 91 0e 28 	lds	r25, 0x280E	; 0x80280e <DataPos+0x1>
+ 6e2:	01 96       	adiw	r24, 0x01	; 1
+ 6e4:	80 93 0d 28 	sts	0x280D, r24	; 0x80280d <DataPos>
+ 6e8:	90 93 0e 28 	sts	0x280E, r25	; 0x80280e <DataPos+0x1>
+ 6ec:	1f c0       	rjmp	.+62     	; 0x72c <__vector_17+0xcc>
+		}	    
+    	} else 
+	if (!(BusState & (1<<ReceiveCompleted)) && !(BusState & (1<<TransmitRequested)) && !(BusState & (1<<Transmitting)) && !(BusState & (1<<Receiving)) && (BusState & (1<<BusTimedOut))) 
+ 6ee:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 6f2:	83 fd       	sbrc	r24, 3
+ 6f4:	1b c0       	rjmp	.+54     	; 0x72c <__vector_17+0xcc>
+ 6f6:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 6fa:	84 fd       	sbrc	r24, 4
+ 6fc:	17 c0       	rjmp	.+46     	; 0x72c <__vector_17+0xcc>
+ 6fe:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 702:	82 fd       	sbrc	r24, 2
+ 704:	13 c0       	rjmp	.+38     	; 0x72c <__vector_17+0xcc>
+ 706:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 70a:	81 fd       	sbrc	r24, 1
+ 70c:	0f c0       	rjmp	.+30     	; 0x72c <__vector_17+0xcc>
+ 70e:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 712:	80 ff       	sbrs	r24, 0
+ 714:	0b c0       	rjmp	.+22     	; 0x72c <__vector_17+0xcc>
+	{ 
+		 rxbuffer[0]=data;
+ 716:	90 93 49 28 	sts	0x2849, r25	; 0x802849 <rxbuffer>
+		 BusState=((1<<Receiving)|(1<<TimerActive));
+ 71a:	82 e2       	ldi	r24, 0x22	; 34
+ 71c:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+		 DataPos=1;
+ 720:	81 e0       	ldi	r24, 0x01	; 1
+ 722:	90 e0       	ldi	r25, 0x00	; 0
+ 724:	80 93 0d 28 	sts	0x280D, r24	; 0x80280d <DataPos>
+ 728:	90 93 0e 28 	sts	0x280E, r25	; 0x80280e <DataPos+0x1>
+    	}
+}
+ 72c:	ff 91       	pop	r31
+ 72e:	ef 91       	pop	r30
+ 730:	bf 91       	pop	r27
+ 732:	af 91       	pop	r26
+ 734:	9f 91       	pop	r25
+ 736:	8f 91       	pop	r24
+ 738:	7f 91       	pop	r23
+ 73a:	6f 91       	pop	r22
+ 73c:	5f 91       	pop	r21
+ 73e:	4f 91       	pop	r20
+ 740:	3f 91       	pop	r19
+ 742:	2f 91       	pop	r18
+ 744:	0f 90       	pop	r0
+ 746:	0f be       	out	0x3f, r0	; 63
+ 748:	0f 90       	pop	r0
+ 74a:	1f 90       	pop	r1
+ 74c:	18 95       	reti
+
+0000074e <__vector_18>:
+
+ISR(UART_TRANSMIT_INTERRUPT)
+{
+ 74e:	1f 92       	push	r1
+ 750:	0f 92       	push	r0
+ 752:	0f b6       	in	r0, 0x3f	; 63
+ 754:	0f 92       	push	r0
+ 756:	11 24       	eor	r1, r1
+ 758:	2f 93       	push	r18
+ 75a:	3f 93       	push	r19
+ 75c:	8f 93       	push	r24
+ 75e:	9f 93       	push	r25
+ 760:	ef 93       	push	r30
+ 762:	ff 93       	push	r31
+	BusState&=~(1<<TransmitRequested);
+ 764:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 768:	8f 7e       	andi	r24, 0xEF	; 239
+ 76a:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+	BusState|=(1<<Transmitting);
+ 76e:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 772:	84 60       	ori	r24, 0x04	; 4
+ 774:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+    #ifdef USART_NUMBER
+	UART_TXDATA=rxbuffer[DataPos];
+ 778:	e0 91 0d 28 	lds	r30, 0x280D	; 0x80280d <DataPos>
+ 77c:	f0 91 0e 28 	lds	r31, 0x280E	; 0x80280e <DataPos+0x1>
+ 780:	e7 5b       	subi	r30, 0xB7	; 183
+ 782:	f7 4d       	sbci	r31, 0xD7	; 215
+ 784:	80 81       	ld	r24, Z
+ 786:	80 93 02 08 	sts	0x0802, r24	; 0x800802 <__TEXT_REGION_LENGTH__+0x7f4802>
+    #else
+	UART_DATA=rxbuffer[DataPos];
+    #endif
+    DataPos++;
+ 78a:	80 91 0d 28 	lds	r24, 0x280D	; 0x80280d <DataPos>
+ 78e:	90 91 0e 28 	lds	r25, 0x280E	; 0x80280e <DataPos+0x1>
+ 792:	01 96       	adiw	r24, 0x01	; 1
+ 794:	80 93 0d 28 	sts	0x280D, r24	; 0x80280d <DataPos>
+ 798:	90 93 0e 28 	sts	0x280E, r25	; 0x80280e <DataPos+0x1>
+	if (DataPos==(PacketTopIndex+1)) {
+ 79c:	80 91 00 28 	lds	r24, 0x2800	; 0x802800 <__DATA_REGION_ORIGIN__>
+ 7a0:	20 91 0d 28 	lds	r18, 0x280D	; 0x80280d <DataPos>
+ 7a4:	30 91 0e 28 	lds	r19, 0x280E	; 0x80280e <DataPos+0x1>
+ 7a8:	90 e0       	ldi	r25, 0x00	; 0
+ 7aa:	01 96       	adiw	r24, 0x01	; 1
+ 7ac:	82 17       	cp	r24, r18
+ 7ae:	93 07       	cpc	r25, r19
+ 7b0:	29 f4       	brne	.+10     	; 0x7bc <__vector_18+0x6e>
+		UART_CONTROL&=~(1<<UART_UDRIE);
+ 7b2:	e0 e0       	ldi	r30, 0x00	; 0
+ 7b4:	f8 e0       	ldi	r31, 0x08	; 8
+ 7b6:	85 81       	ldd	r24, Z+5	; 0x05
+ 7b8:	8f 7d       	andi	r24, 0xDF	; 223
+ 7ba:	85 83       	std	Z+5, r24	; 0x05
+	}
+}
+ 7bc:	ff 91       	pop	r31
+ 7be:	ef 91       	pop	r30
+ 7c0:	9f 91       	pop	r25
+ 7c2:	8f 91       	pop	r24
+ 7c4:	3f 91       	pop	r19
+ 7c6:	2f 91       	pop	r18
+ 7c8:	0f 90       	pop	r0
+ 7ca:	0f be       	out	0x3f, r0	; 63
+ 7cc:	0f 90       	pop	r0
+ 7ce:	1f 90       	pop	r1
+ 7d0:	18 95       	reti
+
+000007d2 <__vector_19>:
+
+ISR(UART_TRANSMIT_COMPLETE_INTERRUPT)
+{
+ 7d2:	1f 92       	push	r1
+ 7d4:	0f 92       	push	r0
+ 7d6:	0f b6       	in	r0, 0x3f	; 63
+ 7d8:	0f 92       	push	r0
+ 7da:	11 24       	eor	r1, r1
+ 7dc:	2f 93       	push	r18
+ 7de:	3f 93       	push	r19
+ 7e0:	4f 93       	push	r20
+ 7e2:	5f 93       	push	r21
+ 7e4:	6f 93       	push	r22
+ 7e6:	7f 93       	push	r23
+ 7e8:	8f 93       	push	r24
+ 7ea:	9f 93       	push	r25
+ 7ec:	af 93       	push	r26
+ 7ee:	bf 93       	push	r27
+ 7f0:	ef 93       	push	r30
+ 7f2:	ff 93       	push	r31
+    #ifdef USART_NUMBER
+    USART_NUMBER.STATUS = USART_TXCIF_bm;
+ 7f4:	80 e4       	ldi	r24, 0x40	; 64
+ 7f6:	80 93 04 08 	sts	0x0804, r24	; 0x800804 <__TEXT_REGION_LENGTH__+0x7f4804>
+    #endif
+    #if PHYSICAL_TYPE == 485
+    transceiver_rxen();
+    #endif
+ 	modbusReset();
+ 7fa:	0e 94 e2 02 	call	0x5c4	; 0x5c4 <modbusReset>
+}
+ 7fe:	ff 91       	pop	r31
+ 800:	ef 91       	pop	r30
+ 802:	bf 91       	pop	r27
+ 804:	af 91       	pop	r26
+ 806:	9f 91       	pop	r25
+ 808:	8f 91       	pop	r24
+ 80a:	7f 91       	pop	r23
+ 80c:	6f 91       	pop	r22
+ 80e:	5f 91       	pop	r21
+ 810:	4f 91       	pop	r20
+ 812:	3f 91       	pop	r19
+ 814:	2f 91       	pop	r18
+ 816:	0f 90       	pop	r0
+ 818:	0f be       	out	0x3f, r0	; 63
+ 81a:	0f 90       	pop	r0
+ 81c:	1f 90       	pop	r1
+ 81e:	18 95       	reti
+
+00000820 <modbusInit>:
+	#if PHYSICAL_TYPE == 485
+	TRANSCEIVER_ENABLE_PORT_DDR|=(1<<TRANSCEIVER_ENABLE_PIN);
+	transceiver_rxen();
+	#endif
+#else
+    PORTA.DIRSET = 1 << PORT0;
+ 820:	e0 e0       	ldi	r30, 0x00	; 0
+ 822:	f4 e0       	ldi	r31, 0x04	; 4
+ 824:	81 e0       	ldi	r24, 0x01	; 1
+ 826:	81 83       	std	Z+1, r24	; 0x01
+    PORTA.OUTSET = 0 << PORT0;
+ 828:	15 82       	std	Z+5, r1	; 0x05
+
+    USART_NUMBER.BAUD = (uint16_t)USART_BAUD_RATE(mbsBAUDRATE); /* set baud rate register */
+ 82a:	e0 e0       	ldi	r30, 0x00	; 0
+ 82c:	f8 e0       	ldi	r31, 0x08	; 8
+ 82e:	82 e1       	ldi	r24, 0x12	; 18
+ 830:	94 e0       	ldi	r25, 0x04	; 4
+ 832:	80 87       	std	Z+8, r24	; 0x08
+ 834:	91 87       	std	Z+9, r25	; 0x09
+
+	USART_NUMBER.CTRLA = 0 << USART_ABEIE_bp    /* Auto-baud Error Interrupt Enable: disabled */
+ 836:	80 ec       	ldi	r24, 0xC0	; 192
+ 838:	85 83       	std	Z+5, r24	; 0x05
+	               | USART_RS485_OFF_gc   /* RS485 Mode disabled */
+	               | 1 << USART_RXCIE_bp  /* Receive Complete Interrupt Enable: enabled */
+	               | 0 << USART_RXSIE_bp  /* Receiver Start Frame Interrupt Enable: disabled */
+	               | 1 << USART_TXCIE_bp; /* Transmit Complete Interrupt Enable: disabled */
+
+	USART_NUMBER.CTRLC = USART_CMODE_ASYNCHRONOUS_gc /* Asynchronous Mode */
+ 83a:	93 e0       	ldi	r25, 0x03	; 3
+ 83c:	97 83       	std	Z+7, r25	; 0x07
+			 | USART_CHSIZE_8BIT_gc /* Character size: 8 bit */
+			 | USART_PMODE_DISABLED_gc /* No Parity */
+			 | USART_SBMODE_1BIT_gc; /* 1 stop bit */
+
+	USART_NUMBER.CTRLB = 0 << USART_MPCM_bp       /* Multi-processor Communication Mode: disabled */
+ 83e:	86 83       	std	Z+6, r24	; 0x06
+	               | 0 << USART_SFDEN_bp    /* Start Frame Detection Enable: disabled */
+	               | 1 << USART_TXEN_bp;    /* Transmitter Enable: enabled */
+
+
+#endif
+	BusState=(1<<TimerActive);
+ 840:	80 e2       	ldi	r24, 0x20	; 32
+ 842:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+ 846:	08 95       	ret
+
+00000848 <modbusSendMessage>:
+*         Arguments: - packtop: Position of the last byte containing data.
+*                               modbusSendException is a good usage example.
+*/
+void modbusSendMessage(unsigned char packtop)
+{
+	PacketTopIndex=packtop+2;
+ 848:	92 e0       	ldi	r25, 0x02	; 2
+ 84a:	98 0f       	add	r25, r24
+ 84c:	90 93 00 28 	sts	0x2800, r25	; 0x802800 <__DATA_REGION_ORIGIN__>
+	crc16(rxbuffer,packtop);
+ 850:	68 2f       	mov	r22, r24
+ 852:	89 e4       	ldi	r24, 0x49	; 73
+ 854:	98 e2       	ldi	r25, 0x28	; 40
+ 856:	0e 94 5b 02 	call	0x4b6	; 0x4b6 <crc16>
+	BusState|=(1<<TransmitRequested);
+ 85a:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 85e:	80 61       	ori	r24, 0x10	; 16
+ 860:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+	DataPos=0;
+ 864:	10 92 0d 28 	sts	0x280D, r1	; 0x80280d <DataPos>
+ 868:	10 92 0e 28 	sts	0x280E, r1	; 0x80280e <DataPos+0x1>
+	#if PHYSICAL_TYPE == 485
+	transceiver_txen();
+	#endif
+	UART_CONTROL|=(1<<UART_UDRIE);
+ 86c:	e0 e0       	ldi	r30, 0x00	; 0
+ 86e:	f8 e0       	ldi	r31, 0x08	; 8
+ 870:	85 81       	ldd	r24, Z+5	; 0x05
+ 872:	80 62       	ori	r24, 0x20	; 32
+ 874:	85 83       	std	Z+5, r24	; 0x05
+	BusState&=~(1<<ReceiveCompleted);
+ 876:	80 91 0c 28 	lds	r24, 0x280C	; 0x80280c <BusState>
+ 87a:	87 7f       	andi	r24, 0xF7	; 247
+ 87c:	80 93 0c 28 	sts	0x280C, r24	; 0x80280c <BusState>
+ 880:	08 95       	ret
+
+00000882 <modbusSendException>:
+*         Arguments: - exceptionCode
+*                              
+*/
+void modbusSendException(unsigned char exceptionCode)
+{
+	rxbuffer[1]|=(1<<7); //setting MSB of the function code (the exception flag)
+ 882:	e9 e4       	ldi	r30, 0x49	; 73
+ 884:	f8 e2       	ldi	r31, 0x28	; 40
+ 886:	91 81       	ldd	r25, Z+1	; 0x01
+ 888:	90 68       	ori	r25, 0x80	; 128
+ 88a:	91 83       	std	Z+1, r25	; 0x01
+	rxbuffer[2]=exceptionCode; //Exceptioncode. Also the last byte containing data
+ 88c:	82 83       	std	Z+2, r24	; 0x02
+	modbusSendMessage(2);
+ 88e:	82 e0       	ldi	r24, 0x02	; 2
+ 890:	0e 94 24 04 	call	0x848	; 0x848 <modbusSendMessage>
+ 894:	08 95       	ret
+
+00000896 <modbusRequestedAmount>:
+/* @brief:  Returns the amount of requested data objects (coils, discretes, registers)
+*
+*/
+uint16_t modbusRequestedAmount(void)
+{
+	return (rxbuffer[5]|(rxbuffer[4]<<8));
+ 896:	e9 e4       	ldi	r30, 0x49	; 73
+ 898:	f8 e2       	ldi	r31, 0x28	; 40
+ 89a:	85 81       	ldd	r24, Z+5	; 0x05
+ 89c:	24 81       	ldd	r18, Z+4	; 0x04
+ 89e:	90 e0       	ldi	r25, 0x00	; 0
+}
+ 8a0:	92 2b       	or	r25, r18
+ 8a2:	08 95       	ret
+
+000008a4 <modbusRequestedAddress>:
+/* @brief: Returns the address of the first requested data object (coils, discretes, registers)
+*
+*/
+uint16_t modbusRequestedAddress(void)
+{
+	return (rxbuffer[3]|(rxbuffer[2]<<8));
+ 8a4:	e9 e4       	ldi	r30, 0x49	; 73
+ 8a6:	f8 e2       	ldi	r31, 0x28	; 40
+ 8a8:	83 81       	ldd	r24, Z+3	; 0x03
+ 8aa:	22 81       	ldd	r18, Z+2	; 0x02
+ 8ac:	90 e0       	ldi	r25, 0x00	; 0
+}
+ 8ae:	92 2b       	or	r25, r18
+ 8b0:	08 95       	ret
+
+000008b2 <intToModbusRegister>:
+/* @brief: copies a single or multiple bytes from one array of bytes to an array of 16-bit-words
+*
+*/
+void intToModbusRegister(volatile uint16_t *inreg, volatile uint8_t *outreg, uint8_t amount)
+{
+	for (uint8_t c=0; c<amount; c++)
+ 8b2:	44 23       	and	r20, r20
+ 8b4:	81 f0       	breq	.+32     	; 0x8d6 <intToModbusRegister+0x24>
+ 8b6:	a8 2f       	mov	r26, r24
+ 8b8:	b9 2f       	mov	r27, r25
+ 8ba:	e6 2f       	mov	r30, r22
+ 8bc:	f7 2f       	mov	r31, r23
+ 8be:	80 e0       	ldi	r24, 0x00	; 0
+	{
+			*(outreg+c*2) = (uint8_t)(*(inreg+c) >> 8);
+ 8c0:	2d 91       	ld	r18, X+
+ 8c2:	3c 91       	ld	r19, X
+ 8c4:	11 97       	sbiw	r26, 0x01	; 1
+ 8c6:	30 83       	st	Z, r19
+			*(outreg+1+c*2) = (uint8_t)(*(inreg+c));
+ 8c8:	2d 91       	ld	r18, X+
+ 8ca:	3d 91       	ld	r19, X+
+ 8cc:	21 83       	std	Z+1, r18	; 0x01
+/* @brief: copies a single or multiple bytes from one array of bytes to an array of 16-bit-words
+*
+*/
+void intToModbusRegister(volatile uint16_t *inreg, volatile uint8_t *outreg, uint8_t amount)
+{
+	for (uint8_t c=0; c<amount; c++)
+ 8ce:	8f 5f       	subi	r24, 0xFF	; 255
+ 8d0:	32 96       	adiw	r30, 0x02	; 2
+ 8d2:	48 13       	cpse	r20, r24
+ 8d4:	f5 cf       	rjmp	.-22     	; 0x8c0 <intToModbusRegister+0xe>
+ 8d6:	08 95       	ret
+
+000008d8 <modbusRegisterToInt>:
+/* @brief: copies a single or multiple 16-bit-words from one array of integers to an array of bytes
+*
+*/
+void modbusRegisterToInt(volatile uint8_t *inreg, volatile uint16_t *outreg, uint8_t amount)
+{
+	for (uint8_t c=0; c<amount; c++)
+ 8d8:	44 23       	and	r20, r20
+ 8da:	91 f0       	breq	.+36     	; 0x900 <modbusRegisterToInt+0x28>
+ 8dc:	e8 2f       	mov	r30, r24
+ 8de:	f9 2f       	mov	r31, r25
+ 8e0:	a6 2f       	mov	r26, r22
+ 8e2:	b7 2f       	mov	r27, r23
+ 8e4:	20 e0       	ldi	r18, 0x00	; 0
+	{
+		*(outreg+c) = (*(inreg+c*2) << 8) + *(inreg+1+c*2);
+ 8e6:	80 81       	ld	r24, Z
+ 8e8:	31 81       	ldd	r19, Z+1	; 0x01
+ 8ea:	90 e0       	ldi	r25, 0x00	; 0
+ 8ec:	98 2f       	mov	r25, r24
+ 8ee:	88 27       	eor	r24, r24
+ 8f0:	83 0f       	add	r24, r19
+ 8f2:	91 1d       	adc	r25, r1
+ 8f4:	8d 93       	st	X+, r24
+ 8f6:	9d 93       	st	X+, r25
+/* @brief: copies a single or multiple 16-bit-words from one array of integers to an array of bytes
+*
+*/
+void modbusRegisterToInt(volatile uint8_t *inreg, volatile uint16_t *outreg, uint8_t amount)
+{
+	for (uint8_t c=0; c<amount; c++)
+ 8f8:	2f 5f       	subi	r18, 0xFF	; 255
+ 8fa:	32 96       	adiw	r30, 0x02	; 2
+ 8fc:	42 13       	cpse	r20, r18
+ 8fe:	f3 cf       	rjmp	.-26     	; 0x8e6 <modbusRegisterToInt+0xe>
+ 900:	08 95       	ret
+
+00000902 <modbusExchangeRegisters>:
+*                    - startAddress: address of the first register in the supplied array
+*                    - size: input array size in the requested format (16bit-registers)
+*
+*/
+uint8_t modbusExchangeRegisters(volatile uint16_t *ptrToInArray, uint16_t startAddress, uint16_t size)
+{
+ 902:	cf 92       	push	r12
+ 904:	df 92       	push	r13
+ 906:	ef 92       	push	r14
+ 908:	ff 92       	push	r15
+ 90a:	0f 93       	push	r16
+ 90c:	1f 93       	push	r17
+ 90e:	cf 93       	push	r28
+ 910:	df 93       	push	r29
+ 912:	6c 01       	movw	r12, r24
+ 914:	8b 01       	movw	r16, r22
+ 916:	ea 01       	movw	r28, r20
+	uint16_t requestedAmount = modbusRequestedAmount();
+ 918:	0e 94 4b 04 	call	0x896	; 0x896 <modbusRequestedAmount>
+ 91c:	7c 01       	movw	r14, r24
+	uint16_t requestedAdr = modbusRequestedAddress();
+ 91e:	0e 94 52 04 	call	0x8a4	; 0x8a4 <modbusRequestedAddress>
+	if (rxbuffer[1]==fcPresetSingleRegister) requestedAmount=1;
+ 922:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ 926:	26 30       	cpi	r18, 0x06	; 6
+ 928:	19 f4       	brne	.+6      	; 0x930 <modbusExchangeRegisters+0x2e>
+ 92a:	ee 24       	eor	r14, r14
+ 92c:	e3 94       	inc	r14
+ 92e:	f1 2c       	mov	r15, r1
+	if ((requestedAdr>=startAddress) && ((startAddress+size)>=(requestedAmount+requestedAdr))) {
+ 930:	80 17       	cp	r24, r16
+ 932:	91 07       	cpc	r25, r17
+ 934:	08 f4       	brcc	.+2      	; 0x938 <modbusExchangeRegisters+0x36>
+ 936:	76 c0       	rjmp	.+236    	; 0xa24 <modbusExchangeRegisters+0x122>
+ 938:	c0 0f       	add	r28, r16
+ 93a:	d1 1f       	adc	r29, r17
+ 93c:	97 01       	movw	r18, r14
+ 93e:	28 0f       	add	r18, r24
+ 940:	39 1f       	adc	r19, r25
+ 942:	c2 17       	cp	r28, r18
+ 944:	d3 07       	cpc	r29, r19
+ 946:	08 f4       	brcc	.+2      	; 0x94a <modbusExchangeRegisters+0x48>
+ 948:	6d c0       	rjmp	.+218    	; 0xa24 <modbusExchangeRegisters+0x122>
+		
+		if ((rxbuffer[1]==fcReadHoldingRegisters) || (rxbuffer[1]==fcReadInputRegisters) )
+ 94a:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ 94e:	23 30       	cpi	r18, 0x03	; 3
+ 950:	21 f0       	breq	.+8      	; 0x95a <modbusExchangeRegisters+0x58>
+ 952:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ 956:	24 30       	cpi	r18, 0x04	; 4
+ 958:	09 f5       	brne	.+66     	; 0x99c <modbusExchangeRegisters+0x9a>
+		{
+			if ((requestedAmount*2)<=(MaxFrameIndex-4)) //message buffer big enough?
+ 95a:	97 01       	movw	r18, r14
+ 95c:	22 0f       	add	r18, r18
+ 95e:	33 1f       	adc	r19, r19
+ 960:	2c 3f       	cpi	r18, 0xFC	; 252
+ 962:	31 05       	cpc	r19, r1
+ 964:	b0 f4       	brcc	.+44     	; 0x992 <modbusExchangeRegisters+0x90>
+			{
+				rxbuffer[2]=(unsigned char)(requestedAmount*2);
+ 966:	9e 2d       	mov	r25, r14
+ 968:	99 0f       	add	r25, r25
+ 96a:	c9 e4       	ldi	r28, 0x49	; 73
+ 96c:	d8 e2       	ldi	r29, 0x28	; 40
+ 96e:	9a 83       	std	Y+2, r25	; 0x02
+				intToModbusRegister(ptrToInArray+(unsigned char)(requestedAdr-startAddress),rxbuffer+3,requestedAmount);
+ 970:	80 1b       	sub	r24, r16
+ 972:	90 e0       	ldi	r25, 0x00	; 0
+ 974:	88 0f       	add	r24, r24
+ 976:	99 1f       	adc	r25, r25
+ 978:	4e 2d       	mov	r20, r14
+ 97a:	6c e4       	ldi	r22, 0x4C	; 76
+ 97c:	78 e2       	ldi	r23, 0x28	; 40
+ 97e:	8c 0d       	add	r24, r12
+ 980:	9d 1d       	adc	r25, r13
+ 982:	0e 94 59 04 	call	0x8b2	; 0x8b2 <intToModbusRegister>
+				modbusSendMessage(2+rxbuffer[2]);
+ 986:	8a 81       	ldd	r24, Y+2	; 0x02
+ 988:	8e 5f       	subi	r24, 0xFE	; 254
+ 98a:	0e 94 24 04 	call	0x848	; 0x848 <modbusSendMessage>
+				return 1;
+ 98e:	81 e0       	ldi	r24, 0x01	; 1
+ 990:	4f c0       	rjmp	.+158    	; 0xa30 <modbusExchangeRegisters+0x12e>
+			} else modbusSendException(ecIllegalDataValue);
+ 992:	83 e0       	ldi	r24, 0x03	; 3
+ 994:	0e 94 41 04 	call	0x882	; 0x882 <modbusSendException>
+			modbusRegisterToInt(rxbuffer+4,ptrToInArray+(unsigned char)(requestedAdr-startAddress),1);
+			modbusSendMessage(5);
+			return 1;
+		} 
+		//modbusSendException(ecSlaveDeviceFailure); //inapropriate call of modbusExchangeRegisters
+		return 0;
+ 998:	80 e0       	ldi	r24, 0x00	; 0
+	if (rxbuffer[1]==fcPresetSingleRegister) requestedAmount=1;
+	if ((requestedAdr>=startAddress) && ((startAddress+size)>=(requestedAmount+requestedAdr))) {
+		
+		if ((rxbuffer[1]==fcReadHoldingRegisters) || (rxbuffer[1]==fcReadInputRegisters) )
+		{
+			if ((requestedAmount*2)<=(MaxFrameIndex-4)) //message buffer big enough?
+ 99a:	4a c0       	rjmp	.+148    	; 0xa30 <modbusExchangeRegisters+0x12e>
+				intToModbusRegister(ptrToInArray+(unsigned char)(requestedAdr-startAddress),rxbuffer+3,requestedAmount);
+				modbusSendMessage(2+rxbuffer[2]);
+				return 1;
+			} else modbusSendException(ecIllegalDataValue);
+		}
+		else if (rxbuffer[1]==fcPresetMultipleRegisters)
+ 99c:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ 9a0:	20 31       	cpi	r18, 0x10	; 16
+ 9a2:	59 f5       	brne	.+86     	; 0x9fa <modbusExchangeRegisters+0xf8>
+		{
+			if (((rxbuffer[6])>=requestedAmount*2) && ((DataPos-9)>=rxbuffer[6])) //enough data received?
+ 9a4:	20 91 4f 28 	lds	r18, 0x284F	; 0x80284f <rxbuffer+0x6>
+ 9a8:	30 e0       	ldi	r19, 0x00	; 0
+ 9aa:	a7 01       	movw	r20, r14
+ 9ac:	44 0f       	add	r20, r20
+ 9ae:	55 1f       	adc	r21, r21
+ 9b0:	24 17       	cp	r18, r20
+ 9b2:	35 07       	cpc	r19, r21
+ 9b4:	e8 f0       	brcs	.+58     	; 0x9f0 <modbusExchangeRegisters+0xee>
+ 9b6:	40 91 0d 28 	lds	r20, 0x280D	; 0x80280d <DataPos>
+ 9ba:	50 91 0e 28 	lds	r21, 0x280E	; 0x80280e <DataPos+0x1>
+ 9be:	20 91 4f 28 	lds	r18, 0x284F	; 0x80284f <rxbuffer+0x6>
+ 9c2:	49 50       	subi	r20, 0x09	; 9
+ 9c4:	51 09       	sbc	r21, r1
+ 9c6:	30 e0       	ldi	r19, 0x00	; 0
+ 9c8:	42 17       	cp	r20, r18
+ 9ca:	53 07       	cpc	r21, r19
+ 9cc:	88 f0       	brcs	.+34     	; 0x9f0 <modbusExchangeRegisters+0xee>
+			{
+				modbusRegisterToInt(rxbuffer+7,ptrToInArray+(unsigned char)(requestedAdr-startAddress),(unsigned char)(requestedAmount));
+ 9ce:	80 1b       	sub	r24, r16
+ 9d0:	68 2f       	mov	r22, r24
+ 9d2:	70 e0       	ldi	r23, 0x00	; 0
+ 9d4:	66 0f       	add	r22, r22
+ 9d6:	77 1f       	adc	r23, r23
+ 9d8:	6c 0d       	add	r22, r12
+ 9da:	7d 1d       	adc	r23, r13
+ 9dc:	4e 2d       	mov	r20, r14
+ 9de:	80 e5       	ldi	r24, 0x50	; 80
+ 9e0:	98 e2       	ldi	r25, 0x28	; 40
+ 9e2:	0e 94 6c 04 	call	0x8d8	; 0x8d8 <modbusRegisterToInt>
+				modbusSendMessage(5);
+ 9e6:	85 e0       	ldi	r24, 0x05	; 5
+ 9e8:	0e 94 24 04 	call	0x848	; 0x848 <modbusSendMessage>
+				return 1;
+ 9ec:	81 e0       	ldi	r24, 0x01	; 1
+ 9ee:	20 c0       	rjmp	.+64     	; 0xa30 <modbusExchangeRegisters+0x12e>
+			} else modbusSendException(ecIllegalDataValue);//too few data bytes received
+ 9f0:	83 e0       	ldi	r24, 0x03	; 3
+ 9f2:	0e 94 41 04 	call	0x882	; 0x882 <modbusSendException>
+			modbusRegisterToInt(rxbuffer+4,ptrToInArray+(unsigned char)(requestedAdr-startAddress),1);
+			modbusSendMessage(5);
+			return 1;
+		} 
+		//modbusSendException(ecSlaveDeviceFailure); //inapropriate call of modbusExchangeRegisters
+		return 0;
+ 9f6:	80 e0       	ldi	r24, 0x00	; 0
+ 9f8:	1b c0       	rjmp	.+54     	; 0xa30 <modbusExchangeRegisters+0x12e>
+				modbusRegisterToInt(rxbuffer+7,ptrToInArray+(unsigned char)(requestedAdr-startAddress),(unsigned char)(requestedAmount));
+				modbusSendMessage(5);
+				return 1;
+			} else modbusSendException(ecIllegalDataValue);//too few data bytes received
+		}
+		else if (rxbuffer[1]==fcPresetSingleRegister)
+ 9fa:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ 9fe:	26 30       	cpi	r18, 0x06	; 6
+ a00:	b1 f4       	brne	.+44     	; 0xa2e <modbusExchangeRegisters+0x12c>
+		{
+			modbusRegisterToInt(rxbuffer+4,ptrToInArray+(unsigned char)(requestedAdr-startAddress),1);
+ a02:	80 1b       	sub	r24, r16
+ a04:	68 2f       	mov	r22, r24
+ a06:	70 e0       	ldi	r23, 0x00	; 0
+ a08:	66 0f       	add	r22, r22
+ a0a:	77 1f       	adc	r23, r23
+ a0c:	6c 0d       	add	r22, r12
+ a0e:	7d 1d       	adc	r23, r13
+ a10:	41 e0       	ldi	r20, 0x01	; 1
+ a12:	8d e4       	ldi	r24, 0x4D	; 77
+ a14:	98 e2       	ldi	r25, 0x28	; 40
+ a16:	0e 94 6c 04 	call	0x8d8	; 0x8d8 <modbusRegisterToInt>
+			modbusSendMessage(5);
+ a1a:	85 e0       	ldi	r24, 0x05	; 5
+ a1c:	0e 94 24 04 	call	0x848	; 0x848 <modbusSendMessage>
+			return 1;
+ a20:	81 e0       	ldi	r24, 0x01	; 1
+ a22:	06 c0       	rjmp	.+12     	; 0xa30 <modbusExchangeRegisters+0x12e>
+		} 
+		//modbusSendException(ecSlaveDeviceFailure); //inapropriate call of modbusExchangeRegisters
+		return 0;
+		} else {
+		modbusSendException(ecIllegalDataValue);
+ a24:	83 e0       	ldi	r24, 0x03	; 3
+ a26:	0e 94 41 04 	call	0x882	; 0x882 <modbusSendException>
+		return 0;
+ a2a:	80 e0       	ldi	r24, 0x00	; 0
+ a2c:	01 c0       	rjmp	.+2      	; 0xa30 <modbusExchangeRegisters+0x12e>
+			modbusRegisterToInt(rxbuffer+4,ptrToInArray+(unsigned char)(requestedAdr-startAddress),1);
+			modbusSendMessage(5);
+			return 1;
+		} 
+		//modbusSendException(ecSlaveDeviceFailure); //inapropriate call of modbusExchangeRegisters
+		return 0;
+ a2e:	80 e0       	ldi	r24, 0x00	; 0
+		} else {
+		modbusSendException(ecIllegalDataValue);
+		return 0;
+	}
+}
+ a30:	df 91       	pop	r29
+ a32:	cf 91       	pop	r28
+ a34:	1f 91       	pop	r17
+ a36:	0f 91       	pop	r16
+ a38:	ff 90       	pop	r15
+ a3a:	ef 90       	pop	r14
+ a3c:	df 90       	pop	r13
+ a3e:	cf 90       	pop	r12
+ a40:	08 95       	ret
+
+00000a42 <modbusExchangeBits>:
+*                    - startAddress: address of the first bit in the supplied array
+*                    - size: input array size in the requested format (bits)
+*
+*/
+uint8_t modbusExchangeBits(volatile uint8_t *ptrToInArray, uint16_t startAddress, uint16_t size)
+{
+ a42:	cf 92       	push	r12
+ a44:	df 92       	push	r13
+ a46:	ef 92       	push	r14
+ a48:	ff 92       	push	r15
+ a4a:	0f 93       	push	r16
+ a4c:	1f 93       	push	r17
+ a4e:	cf 93       	push	r28
+ a50:	df 93       	push	r29
+ a52:	6c 01       	movw	r12, r24
+ a54:	7b 01       	movw	r14, r22
+ a56:	ea 01       	movw	r28, r20
+	uint16_t requestedAmount = modbusRequestedAmount();
+ a58:	0e 94 4b 04 	call	0x896	; 0x896 <modbusRequestedAmount>
+ a5c:	8c 01       	movw	r16, r24
+	uint16_t requestedAdr = modbusRequestedAddress();
+ a5e:	0e 94 52 04 	call	0x8a4	; 0x8a4 <modbusRequestedAddress>
+	if (rxbuffer[1]==fcForceSingleCoil) requestedAmount=1;
+ a62:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ a66:	25 30       	cpi	r18, 0x05	; 5
+ a68:	11 f4       	brne	.+4      	; 0xa6e <modbusExchangeBits+0x2c>
+ a6a:	01 e0       	ldi	r16, 0x01	; 1
+ a6c:	10 e0       	ldi	r17, 0x00	; 0
+	if ((requestedAdr>=startAddress) && ((startAddress+size)>=(requestedAmount+requestedAdr)))
+ a6e:	8e 15       	cp	r24, r14
+ a70:	9f 05       	cpc	r25, r15
+ a72:	08 f4       	brcc	.+2      	; 0xa76 <modbusExchangeBits+0x34>
+ a74:	a2 c0       	rjmp	.+324    	; 0xbba <modbusExchangeBits+0x178>
+ a76:	ce 0d       	add	r28, r14
+ a78:	df 1d       	adc	r29, r15
+ a7a:	98 01       	movw	r18, r16
+ a7c:	28 0f       	add	r18, r24
+ a7e:	39 1f       	adc	r19, r25
+ a80:	c2 17       	cp	r28, r18
+ a82:	d3 07       	cpc	r29, r19
+ a84:	08 f4       	brcc	.+2      	; 0xa88 <modbusExchangeBits+0x46>
+ a86:	99 c0       	rjmp	.+306    	; 0xbba <modbusExchangeBits+0x178>
+	{
+		if ((rxbuffer[1]==fcReadInputStatus) || (rxbuffer[1]==fcReadCoilStatus))
+ a88:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ a8c:	22 30       	cpi	r18, 0x02	; 2
+ a8e:	29 f0       	breq	.+10     	; 0xa9a <modbusExchangeBits+0x58>
+ a90:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ a94:	21 30       	cpi	r18, 0x01	; 1
+ a96:	09 f0       	breq	.+2      	; 0xa9a <modbusExchangeBits+0x58>
+ a98:	41 c0       	rjmp	.+130    	; 0xb1c <modbusExchangeBits+0xda>
+		{
+			if (requestedAmount<=((MaxFrameIndex-4)*8)) //message buffer big enough?
+ a9a:	09 3d       	cpi	r16, 0xD9	; 217
+ a9c:	27 e0       	ldi	r18, 0x07	; 7
+ a9e:	12 07       	cpc	r17, r18
+ aa0:	c0 f5       	brcc	.+112    	; 0xb12 <modbusExchangeBits+0xd0>
+			{
+				rxbuffer[2]=(requestedAmount/8);
+ aa2:	98 01       	movw	r18, r16
+ aa4:	36 95       	lsr	r19
+ aa6:	27 95       	ror	r18
+ aa8:	36 95       	lsr	r19
+ aaa:	27 95       	ror	r18
+ aac:	36 95       	lsr	r19
+ aae:	27 95       	ror	r18
+ ab0:	20 93 4b 28 	sts	0x284B, r18	; 0x80284b <rxbuffer+0x2>
+				if (requestedAmount%8>0)
+ ab4:	a8 01       	movw	r20, r16
+ ab6:	47 70       	andi	r20, 0x07	; 7
+ ab8:	55 27       	eor	r21, r21
+ aba:	45 2b       	or	r20, r21
+ abc:	69 f0       	breq	.+26     	; 0xad8 <modbusExchangeBits+0x96>
+				{
+					rxbuffer[(uint8_t)(requestedAmount/8)+3]=0x00; //fill last data byte with zeros
+ abe:	33 27       	eor	r19, r19
+ ac0:	a9 e4       	ldi	r26, 0x49	; 73
+ ac2:	b8 e2       	ldi	r27, 0x28	; 40
+ ac4:	f9 01       	movw	r30, r18
+ ac6:	e4 5b       	subi	r30, 0xB4	; 180
+ ac8:	f7 4d       	sbci	r31, 0xD7	; 215
+ aca:	10 82       	st	Z, r1
+					rxbuffer[2]++;
+ acc:	12 96       	adiw	r26, 0x02	; 2
+ ace:	2c 91       	ld	r18, X
+ ad0:	12 97       	sbiw	r26, 0x02	; 2
+ ad2:	2f 5f       	subi	r18, 0xFF	; 255
+ ad4:	12 96       	adiw	r26, 0x02	; 2
+ ad6:	2c 93       	st	X, r18
+				}
+				for (uint16_t c = 0; c<requestedAmount; c++)
+ ad8:	01 15       	cp	r16, r1
+ ada:	11 05       	cpc	r17, r1
+ adc:	99 f0       	breq	.+38     	; 0xb04 <modbusExchangeBits+0xc2>
+ ade:	c0 e0       	ldi	r28, 0x00	; 0
+ ae0:	d0 e0       	ldi	r29, 0x00	; 0
+				{
+					listBitCopy(ptrToInArray,requestedAdr-startAddress+c,rxbuffer+3,c);
+ ae2:	9c 01       	movw	r18, r24
+ ae4:	2e 19       	sub	r18, r14
+ ae6:	3f 09       	sbc	r19, r15
+ ae8:	79 01       	movw	r14, r18
+ aea:	b7 01       	movw	r22, r14
+ aec:	6c 0f       	add	r22, r28
+ aee:	7d 1f       	adc	r23, r29
+ af0:	9e 01       	movw	r18, r28
+ af2:	4c e4       	ldi	r20, 0x4C	; 76
+ af4:	58 e2       	ldi	r21, 0x28	; 40
+ af6:	c6 01       	movw	r24, r12
+ af8:	0e 94 a1 02 	call	0x542	; 0x542 <listBitCopy>
+				if (requestedAmount%8>0)
+				{
+					rxbuffer[(uint8_t)(requestedAmount/8)+3]=0x00; //fill last data byte with zeros
+					rxbuffer[2]++;
+				}
+				for (uint16_t c = 0; c<requestedAmount; c++)
+ afc:	21 96       	adiw	r28, 0x01	; 1
+ afe:	0c 17       	cp	r16, r28
+ b00:	1d 07       	cpc	r17, r29
+ b02:	99 f7       	brne	.-26     	; 0xaea <modbusExchangeBits+0xa8>
+				{
+					listBitCopy(ptrToInArray,requestedAdr-startAddress+c,rxbuffer+3,c);
+				}
+				modbusSendMessage(rxbuffer[2]+2);
+ b04:	80 91 4b 28 	lds	r24, 0x284B	; 0x80284b <rxbuffer+0x2>
+ b08:	8e 5f       	subi	r24, 0xFE	; 254
+ b0a:	0e 94 24 04 	call	0x848	; 0x848 <modbusSendMessage>
+				return 1;
+ b0e:	81 e0       	ldi	r24, 0x01	; 1
+ b10:	5a c0       	rjmp	.+180    	; 0xbc6 <modbusExchangeBits+0x184>
+			} else modbusSendException(ecIllegalDataValue); //too many bits requested within single request
+ b12:	83 e0       	ldi	r24, 0x03	; 3
+ b14:	0e 94 41 04 	call	0x882	; 0x882 <modbusSendException>
+			listBitCopy(rxbuffer+4,0,ptrToInArray,requestedAdr-startAddress);
+			modbusSendMessage(5); 
+			return 1;
+		}
+		//modbusSendException(ecSlaveDeviceFailure); //inanpropriate call of modbusExchangeBits
+		return 0;
+ b18:	80 e0       	ldi	r24, 0x00	; 0
+	if (rxbuffer[1]==fcForceSingleCoil) requestedAmount=1;
+	if ((requestedAdr>=startAddress) && ((startAddress+size)>=(requestedAmount+requestedAdr)))
+	{
+		if ((rxbuffer[1]==fcReadInputStatus) || (rxbuffer[1]==fcReadCoilStatus))
+		{
+			if (requestedAmount<=((MaxFrameIndex-4)*8)) //message buffer big enough?
+ b1a:	55 c0       	rjmp	.+170    	; 0xbc6 <modbusExchangeBits+0x184>
+				}
+				modbusSendMessage(rxbuffer[2]+2);
+				return 1;
+			} else modbusSendException(ecIllegalDataValue); //too many bits requested within single request
+		}
+		else if (rxbuffer[1]==fcForceMultipleCoils)
+ b1c:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ b20:	2f 30       	cpi	r18, 0x0F	; 15
+ b22:	c1 f5       	brne	.+112    	; 0xb94 <modbusExchangeBits+0x152>
+		{
+			if (((rxbuffer[6]*8)>=requestedAmount) && ((DataPos-9)>=rxbuffer[6])) //enough data received?
+ b24:	20 91 4f 28 	lds	r18, 0x284F	; 0x80284f <rxbuffer+0x6>
+ b28:	30 e0       	ldi	r19, 0x00	; 0
+ b2a:	22 0f       	add	r18, r18
+ b2c:	33 1f       	adc	r19, r19
+ b2e:	22 0f       	add	r18, r18
+ b30:	33 1f       	adc	r19, r19
+ b32:	22 0f       	add	r18, r18
+ b34:	33 1f       	adc	r19, r19
+ b36:	20 17       	cp	r18, r16
+ b38:	31 07       	cpc	r19, r17
+ b3a:	38 f1       	brcs	.+78     	; 0xb8a <modbusExchangeBits+0x148>
+ b3c:	40 91 0d 28 	lds	r20, 0x280D	; 0x80280d <DataPos>
+ b40:	50 91 0e 28 	lds	r21, 0x280E	; 0x80280e <DataPos+0x1>
+ b44:	20 91 4f 28 	lds	r18, 0x284F	; 0x80284f <rxbuffer+0x6>
+ b48:	49 50       	subi	r20, 0x09	; 9
+ b4a:	51 09       	sbc	r21, r1
+ b4c:	30 e0       	ldi	r19, 0x00	; 0
+ b4e:	42 17       	cp	r20, r18
+ b50:	53 07       	cpc	r21, r19
+ b52:	d8 f0       	brcs	.+54     	; 0xb8a <modbusExchangeBits+0x148>
+			{
+				for (uint16_t c = 0; c<requestedAmount; c++)
+ b54:	01 15       	cp	r16, r1
+ b56:	11 05       	cpc	r17, r1
+ b58:	99 f0       	breq	.+38     	; 0xb80 <modbusExchangeBits+0x13e>
+ b5a:	c0 e0       	ldi	r28, 0x00	; 0
+ b5c:	d0 e0       	ldi	r29, 0x00	; 0
+				{
+					listBitCopy(rxbuffer+7,c,ptrToInArray,requestedAdr-startAddress+c);
+ b5e:	9c 01       	movw	r18, r24
+ b60:	2e 19       	sub	r18, r14
+ b62:	3f 09       	sbc	r19, r15
+ b64:	79 01       	movw	r14, r18
+ b66:	97 01       	movw	r18, r14
+ b68:	2c 0f       	add	r18, r28
+ b6a:	3d 1f       	adc	r19, r29
+ b6c:	a6 01       	movw	r20, r12
+ b6e:	be 01       	movw	r22, r28
+ b70:	80 e5       	ldi	r24, 0x50	; 80
+ b72:	98 e2       	ldi	r25, 0x28	; 40
+ b74:	0e 94 a1 02 	call	0x542	; 0x542 <listBitCopy>
+		}
+		else if (rxbuffer[1]==fcForceMultipleCoils)
+		{
+			if (((rxbuffer[6]*8)>=requestedAmount) && ((DataPos-9)>=rxbuffer[6])) //enough data received?
+			{
+				for (uint16_t c = 0; c<requestedAmount; c++)
+ b78:	21 96       	adiw	r28, 0x01	; 1
+ b7a:	0c 17       	cp	r16, r28
+ b7c:	1d 07       	cpc	r17, r29
+ b7e:	99 f7       	brne	.-26     	; 0xb66 <modbusExchangeBits+0x124>
+				{
+					listBitCopy(rxbuffer+7,c,ptrToInArray,requestedAdr-startAddress+c);
+				}
+				modbusSendMessage(5);
+ b80:	85 e0       	ldi	r24, 0x05	; 5
+ b82:	0e 94 24 04 	call	0x848	; 0x848 <modbusSendMessage>
+				return 1;
+ b86:	81 e0       	ldi	r24, 0x01	; 1
+ b88:	1e c0       	rjmp	.+60     	; 0xbc6 <modbusExchangeBits+0x184>
+			} else modbusSendException(ecIllegalDataValue);//exception too few data bytes received
+ b8a:	83 e0       	ldi	r24, 0x03	; 3
+ b8c:	0e 94 41 04 	call	0x882	; 0x882 <modbusSendException>
+			listBitCopy(rxbuffer+4,0,ptrToInArray,requestedAdr-startAddress);
+			modbusSendMessage(5); 
+			return 1;
+		}
+		//modbusSendException(ecSlaveDeviceFailure); //inanpropriate call of modbusExchangeBits
+		return 0;
+ b90:	80 e0       	ldi	r24, 0x00	; 0
+ b92:	19 c0       	rjmp	.+50     	; 0xbc6 <modbusExchangeBits+0x184>
+				}
+				modbusSendMessage(5);
+				return 1;
+			} else modbusSendException(ecIllegalDataValue);//exception too few data bytes received
+		}
+		else if (rxbuffer[1]==fcForceSingleCoil) {
+ b94:	20 91 4a 28 	lds	r18, 0x284A	; 0x80284a <rxbuffer+0x1>
+ b98:	25 30       	cpi	r18, 0x05	; 5
+ b9a:	a1 f4       	brne	.+40     	; 0xbc4 <modbusExchangeBits+0x182>
+			listBitCopy(rxbuffer+4,0,ptrToInArray,requestedAdr-startAddress);
+ b9c:	9c 01       	movw	r18, r24
+ b9e:	2e 19       	sub	r18, r14
+ ba0:	3f 09       	sbc	r19, r15
+ ba2:	a6 01       	movw	r20, r12
+ ba4:	60 e0       	ldi	r22, 0x00	; 0
+ ba6:	70 e0       	ldi	r23, 0x00	; 0
+ ba8:	8d e4       	ldi	r24, 0x4D	; 77
+ baa:	98 e2       	ldi	r25, 0x28	; 40
+ bac:	0e 94 a1 02 	call	0x542	; 0x542 <listBitCopy>
+			modbusSendMessage(5); 
+ bb0:	85 e0       	ldi	r24, 0x05	; 5
+ bb2:	0e 94 24 04 	call	0x848	; 0x848 <modbusSendMessage>
+			return 1;
+ bb6:	81 e0       	ldi	r24, 0x01	; 1
+ bb8:	06 c0       	rjmp	.+12     	; 0xbc6 <modbusExchangeBits+0x184>
+		}
+		//modbusSendException(ecSlaveDeviceFailure); //inanpropriate call of modbusExchangeBits
+		return 0;
+	} else
+	{
+		modbusSendException(ecIllegalDataValue);
+ bba:	83 e0       	ldi	r24, 0x03	; 3
+ bbc:	0e 94 41 04 	call	0x882	; 0x882 <modbusSendException>
+		return 0;
+ bc0:	80 e0       	ldi	r24, 0x00	; 0
+ bc2:	01 c0       	rjmp	.+2      	; 0xbc6 <modbusExchangeBits+0x184>
+			listBitCopy(rxbuffer+4,0,ptrToInArray,requestedAdr-startAddress);
+			modbusSendMessage(5); 
+			return 1;
+		}
+		//modbusSendException(ecSlaveDeviceFailure); //inanpropriate call of modbusExchangeBits
+		return 0;
+ bc4:	80 e0       	ldi	r24, 0x00	; 0
+	} else
+	{
+		modbusSendException(ecIllegalDataValue);
+		return 0;
+	}
+}
+ bc6:	df 91       	pop	r29
+ bc8:	cf 91       	pop	r28
+ bca:	1f 91       	pop	r17
+ bcc:	0f 91       	pop	r16
+ bce:	ff 90       	pop	r15
+ bd0:	ef 90       	pop	r14
+ bd2:	df 90       	pop	r13
+ bd4:	cf 90       	pop	r12
+ bd6:	08 95       	ret
+
+00000bd8 <__tablejump2__>:
+ bd8:	ee 0f       	add	r30, r30
+ bda:	ff 1f       	adc	r31, r31
+ bdc:	05 90       	lpm	r0, Z+
+ bde:	f4 91       	lpm	r31, Z
+ be0:	e0 2d       	mov	r30, r0
+ be2:	09 94       	ijmp
+
+00000be4 <_exit>:
+ be4:	f8 94       	cli
+
+00000be6 <__stop_program>:
+ be6:	ff cf       	rjmp	.-2      	; 0xbe6 <__stop_program>
