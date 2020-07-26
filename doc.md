@@ -1,9 +1,9 @@
-## ModBus definitions
-# Coils
-# Input Registers
+# ModBus definitions
+## Coils
+## Input Registers
 | ModBus Input Register | Inverter RX byte| Name| Range | Scaling | Units/notes|
 |-------:|--------:|:--------------:|:--------:|--------:|:-------         |
-|     1  |     0  |INVERTER_STATUS  | | |  |
+|     1  |     0  |INVERTER_STATUS  | | | [Inverter status](#inverter-status)|
 |     2  |     1  |INVERTER_FAULT   | | |  |
 |     3  |   2,3  |DC_VOLTS         |   0-100.0  |  0.1 | Volts
 |     4  |   4,5  |DC_AMPS          |   0-500    |   1  | Amps
@@ -21,8 +21,8 @@
 |  14_H  |     8  |INVERTER_LED     |  | | IF = 0, then INV LED is off else INV Led on remote ON |
 |    15  |    15  |STACK_MODE       |  | |  |  |
 
-## Notes
-   [Inverter status]: "Inverter status"
+# Notes
+## Inverter status
 
 | Inverter status  | value | Notes|
 |:-----------------|:-----:|:-----|
