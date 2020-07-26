@@ -20,3 +20,20 @@
 |  14_L  |     9  |CHARGER_LED      |  | | IF = 0, then CHG LED is off else CHG Led on remote ON |
 |  14_H  |     8  |INVERTER_LED     |  | | IF = 0, then INV LED is off else INV Led on remote ON |
 |    15  |    15  |STACK_MODE       |  | |  |  |
+
+## Notes
+   [Inverter status]: "Inverter status"
+
+| Inverter status  | value | Notes|
+|:-----------------|:-----:|:-----|
+| Charger Standby  |  0x00 | AC in, charging disabled |
+| EQMODE           |  0x01 | // unit is eq'ing with ac |
+| FLOATMODE        |  0x02 | // unit is float charging w/ac |
+| ABSORBMODE       |  0x04 | // unit is charging in absorb w/ ac |
+| BULKMODE         |  0x08 | // unit is charging in bulk mode with ac applied |
+| BATSAVERMODE     |  0x09 | // unit is charge mode but no charge current since bat is full |
+| CHARGEMODE       |  0x10 | // unit is in charge mode, no ac applied |
+| Off              |  0x20 | // inverter off, charger off waiting for user input (no AC pass through) |
+| INVERTMODE       |  0x40 | // inverter on (charger on or off) |
+| Inverter Standby |  0x50 | MS rev 4.0 or later only (PAE) |
+| SEARCHMODE       |  0x80 | // searching for load (charger on or off) |
