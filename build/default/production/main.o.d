@@ -16,6 +16,8 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay_basic.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/math.h \
+ nvmctrl.h \
+ /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stddef.h \
  modbus.h inverter.h
 
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/io.h:
@@ -51,6 +53,10 @@ hardware.h:
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay_basic.h:
 
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/math.h:
+
+nvmctrl.h:
+
+/home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stddef.h:
 
 modbus.h:
 

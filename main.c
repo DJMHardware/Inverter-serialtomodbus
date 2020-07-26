@@ -5,11 +5,11 @@
  * Created on March 10, 2020, 10:40 PM
  */
 
-
 #include <avr/io.h>
 #include "hardware.h"
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include "nvmctrl.h"
 #include "modbus.h"
 #include "inverter.h"
 
@@ -49,7 +49,7 @@ int main(void)
     {
         //USART0_sendString("Hello World!\r\n");
         modbus_get();
-    //    _delay_ms(500);
+            //    _delay_ms(500);
     }
 }
 

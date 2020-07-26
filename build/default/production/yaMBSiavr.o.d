@@ -12,7 +12,7 @@ build/default/production/yaMBSiavr.o.d \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/xmega.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/fuse.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/lock.h \
- modbus.h yaMBSiavr.h \
+ modbus.h inverter.h yaMBSiavr.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h
 
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/io.h:
@@ -40,6 +40,8 @@ build/default/production/yaMBSiavr.o.d \
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/lock.h:
 
 modbus.h:
+
+inverter.h:
 
 yaMBSiavr.h:
 

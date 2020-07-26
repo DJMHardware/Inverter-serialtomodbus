@@ -16,6 +16,7 @@
       <itemPath>inverter.c</itemPath>
       <itemPath>modbus.c</itemPath>
       <itemPath>yaMBSiavr.c</itemPath>
+      <itemPath>nvmctrl.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -118,7 +119,7 @@
         <property key="make-warnings-into-errors" value="false"/>
         <property key="no-interrupts" value="false"/>
         <property key="no-system-directories" value="false"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value="-Os"/>
         <property key="pack-struct" value="true"/>
         <property key="preprocessor-macros" value="F_CPU=10000000"/>
         <property key="preprocessor-macros-undefined" value=""/>
@@ -194,7 +195,7 @@
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.configurationmemory2" value="true"/>
         <property key="memories.dataflash" value="true"/>
-        <property key="memories.eeprom" value="true"/>
+        <property key="memories.eeprom" value="false"/>
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
@@ -202,6 +203,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-5fff"/>
+        <property key="programmerToGoFilePath"
+                  value="/home/sasquachdm/Dropbox/DJMHardware/trailer-automation/battery-inverter/code/inverter_serial/debug/default/default_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -379,6 +382,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-5fff"/>
+        <property key="programmerToGoFilePath"
+                  value="/home/sasquachdm/Dropbox/DJMHardware/trailer-automation/battery-inverter/code/inverter_serial/debug/Copy_of_default/Copy_of_default_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

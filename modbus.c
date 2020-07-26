@@ -21,13 +21,15 @@
 #include <avr/wdt.h>
 #include "modbus.h"
 #include "yaMBSiavr.h"
+#include "inverter.h"
+#include "nvmctrl.h"
+
 
 volatile uint8_t instate = 0;
 volatile uint8_t outstate = 0;
 volatile uint8_t ins = 0;
 volatile uint8_t outs = 0;
-volatile uint16_t inputRegisters[4];
-volatile uint16_t holdingRegisters[4];
+volatile modbus_data_t modbusData;
 
 /*
 *   Modify the following 3 functions to implement your own pin configurations...
@@ -72,45 +74,45 @@ void modbus_get(void) {
 	{
 		switch(rxbuffer[1]) {
 			case fcReadCoilStatus: {
-				modbusExchangeBits(&outstate,0,8);
+				modbusExchangeBits(modbusData.Coil.Array,mbsSTART_ADDRESS,mbsCOIL_SIZE);
 			}
 			break;
 			
 			case fcReadInputStatus: {
 				//volatile uint8_t inps = ReadIns();
-				modbusExchangeBits(&ins,0,8);
+				modbusExchangeBits(modbusData.InputStatus.Array,mbsSTART_ADDRESS,mbsINPUT_STATUS_SIZE);
 			}
 			break;
 			
 			case fcReadHoldingRegisters: {
-				modbusExchangeRegisters(holdingRegisters,0,4);
+				modbusExchangeRegisters(modbusData.Holding.Registers,mbsSTART_ADDRESS,mbsHOLDING_SIZE);
 			}
 			break;
 			
 			case fcReadInputRegisters: {
-				modbusExchangeRegisters(inputRegisters,0,4);
+				modbusExchangeRegisters(modbusData.Input.Registers,mbsSTART_ADDRESS,mbsINPUT_SIZE);
 			}
 			break;
 			
 			case fcForceSingleCoil: {
-				modbusExchangeBits(&outstate,0,8);
+				modbusExchangeBits(modbusData.Coil.Array,mbsSTART_ADDRESS,mbsCOIL_SIZE);
 				//SetOuts(outstate);
 			}
 			break;
 			
 			case fcPresetSingleRegister: {
-				modbusExchangeRegisters(holdingRegisters,0,4);
+				modbusExchangeRegisters(modbusData.Holding.Registers,mbsSTART_ADDRESS,mbsHOLDING_SIZE);
 			}
 			break;
 			
 			case fcForceMultipleCoils: {
-				modbusExchangeBits(&outstate,0,8);
+				modbusExchangeBits(modbusData.Coil.Array,mbsSTART_ADDRESS,mbsCOIL_SIZE);
 				//SetOuts(outstate);
 			}
 			break;
 			
 			case fcPresetMultipleRegisters: {
-				modbusExchangeRegisters(holdingRegisters,0,4);
+				modbusExchangeRegisters(modbusData.Holding.Registers,mbsSTART_ADDRESS,mbsHOLDING_SIZE);
 			}
 			break;
 			

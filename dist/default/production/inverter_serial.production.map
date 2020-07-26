@@ -8,16 +8,16 @@ Archive member included to satisfy reference by file (symbol)
                               build/default/production/yaMBSiavr.o (__do_copy_data)
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_clear_bss.o)
                               build/default/production/main.o (__do_clear_bss)
+/home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/libc.a(memcpy.o)
+                              build/default/production/nvmctrl.o (memcpy)
 
 Allocating common symbols
 Common symbol       size              file
 
-Inverter            0x27              build/default/production/inverter.o
+InverterData        0x31              build/default/production/inverter.o
+EEpromData          0x10              build/default/production/inverter.o
 Inverter_RX_Error   0x1               build/default/production/inverter.o
-Inverter_last_bytetime
-                    0x2               build/default/production/inverter.o
-holdingRegisters    0x8               build/default/production/modbus.o
-inputRegisters      0x8               build/default/production/modbus.o
+modbusData          0x40              build/default/production/modbus.o
 rxbuffer            0x100             build/default/production/modbus.o
 
 Discarded input sections
@@ -44,6 +44,8 @@ Discarded input sections
  .data          0x0000000000000000        0x0 build/default/production/modbus.o
  .bss           0x0000000000000000        0x0 build/default/production/modbus.o
  .bss.outs      0x0000000000000000        0x1 build/default/production/modbus.o
+ .bss.ins       0x0000000000000000        0x1 build/default/production/modbus.o
+ .bss.outstate  0x0000000000000000        0x1 build/default/production/modbus.o
  .bss.instate   0x0000000000000000        0x1 build/default/production/modbus.o
  .text          0x0000000000000000        0x0 build/default/production/yaMBSiavr.o
  .data          0x0000000000000000        0x0 build/default/production/yaMBSiavr.o
@@ -51,9 +53,22 @@ Discarded input sections
  .text.modbusGetAddress
                 0x0000000000000000        0x6 build/default/production/yaMBSiavr.o
  .text.listRegisterCopy
-                0x0000000000000000       0x24 build/default/production/yaMBSiavr.o
+                0x0000000000000000       0x20 build/default/production/yaMBSiavr.o
  .bss.modBusStaMaStates
                 0x0000000000000000        0x1 build/default/production/yaMBSiavr.o
+ .text          0x0000000000000000        0x0 build/default/production/nvmctrl.o
+ .data          0x0000000000000000        0x0 build/default/production/nvmctrl.o
+ .bss           0x0000000000000000        0x0 build/default/production/nvmctrl.o
+ .text.NVMCTRL_register_callback
+                0x0000000000000000        0xa build/default/production/nvmctrl.o
+ .text.NVMCTRL_read_eeprom_byte
+                0x0000000000000000       0x10 build/default/production/nvmctrl.o
+ .text.NVMCTRL_write_eeprom_block
+                0x0000000000000000       0x3c build/default/production/nvmctrl.o
+ .text.NVMCTRL_write_eeprom_byte
+                0x0000000000000000       0x22 build/default/production/nvmctrl.o
+ .text.NVMCTRL_is_eeprom_ready
+                0x0000000000000000        0xe build/default/production/nvmctrl.o
  .text          0x0000000000000000        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_exit.o)
  .data          0x0000000000000000        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_exit.o)
  .bss           0x0000000000000000        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_exit.o)
@@ -117,6 +132,9 @@ Discarded input sections
                 0x0000000000000000        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
                 0x0000000000000000        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/libc.a(memcpy.o)
+ .data          0x0000000000000000        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/libc.a(memcpy.o)
+ .bss           0x0000000000000000        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/libc.a(memcpy.o)
 
 Memory Configuration
 
@@ -139,6 +157,7 @@ LOAD build/default/production/main.o
 LOAD build/default/production/inverter.o
 LOAD build/default/production/modbus.o
 LOAD build/default/production/yaMBSiavr.o
+LOAD build/default/production/nvmctrl.o
                 0x0000000000000001                __MPLAB_BUILD = 0x1
 START GROUP
 LOAD /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/libm.a
@@ -248,7 +267,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0xbe8
+.text           0x0000000000000000     0x10b4
  *(.vectors)
  .vectors       0x0000000000000000       0xa0 /opt/microchip/mplabx/v5.30/packs/Microchip/ATmega_DFP/2.0.12/gcc/dev/atmega4809/avrxmega3/crtatmega4809.o
                 0x0000000000000000                __vectors
@@ -322,7 +341,6 @@ END GROUP
                 0x00000000000000fa                __vector_35
                 0x00000000000000fa                __vector_39
                 0x00000000000000fa                __vector_23
-                0x00000000000000fa                __vector_30
                 0x00000000000000fa                __vector_25
                 0x00000000000000fa                __vector_11
                 0x00000000000000fa                __vector_13
@@ -350,98 +368,132 @@ END GROUP
  .text.tick_interupt_init
                 0x0000000000000166       0x16 build/default/production/main.o
                 0x0000000000000166                tick_interupt_init
- .text.main     0x000000000000017c       0x34 build/default/production/main.o
+ .text.startup.main
+                0x000000000000017c       0x38 build/default/production/main.o
                 0x000000000000017c                main
  .text.__vector_3
-                0x00000000000001b0       0x66 build/default/production/inverter.o
-                0x00000000000001b0                __vector_3
+                0x00000000000001b4       0x6a build/default/production/inverter.o
+                0x00000000000001b4                __vector_3
  .text.__vector_26
-                0x0000000000000216       0xca build/default/production/inverter.o
-                0x0000000000000216                __vector_26
+                0x000000000000021e       0xb8 build/default/production/inverter.o
+                0x000000000000021e                __vector_26
  .text.__vector_27
-                0x00000000000002e0       0x52 build/default/production/inverter.o
-                0x00000000000002e0                __vector_27
+                0x00000000000002d6       0x54 build/default/production/inverter.o
+                0x00000000000002d6                __vector_27
  .text.RTC_0_init
-                0x0000000000000332       0x22 build/default/production/inverter.o
-                0x0000000000000332                RTC_0_init
+                0x000000000000032a       0x26 build/default/production/inverter.o
+                0x000000000000032a                RTC_0_init
  .text.USART_1_init
-                0x0000000000000354       0x26 build/default/production/inverter.o
-                0x0000000000000354                USART_1_init
+                0x0000000000000350       0x26 build/default/production/inverter.o
+                0x0000000000000350                USART_1_init
+ .text.INVERTER_RX_copy_data
+                0x0000000000000376       0xdc build/default/production/inverter.o
+                0x0000000000000376                INVERTER_RX_copy_data
+ .text.INVERTER_TX_copy_data
+                0x0000000000000452       0x76 build/default/production/inverter.o
+                0x0000000000000452                INVERTER_TX_copy_data
+ .text.INVERTER_TestLED
+                0x00000000000004c8       0x5c build/default/production/inverter.o
+                0x00000000000004c8                INVERTER_TestLED
+ .text.INVERTER_RX_TestData
+                0x0000000000000524       0xfa build/default/production/inverter.o
+                0x0000000000000524                INVERTER_RX_TestData
+ .text.INVERTER_load_eeprom
+                0x000000000000061e       0x46 build/default/production/inverter.o
+                0x000000000000061e                INVERTER_load_eeprom
  .text.INVERTER_init
-                0x000000000000037a        0xa build/default/production/inverter.o
-                0x000000000000037a                INVERTER_init
+                0x0000000000000664       0x14 build/default/production/inverter.o
+                0x0000000000000664                INVERTER_init
+ .text.INVERTER_store_eeprom
+                0x0000000000000678       0x6c build/default/production/inverter.o
+                0x0000000000000678                INVERTER_store_eeprom
+ .text.INVERTER_RX_ComputeResponse
+                0x00000000000006e4      0x10a build/default/production/inverter.o
+                0x00000000000006e4                INVERTER_RX_ComputeResponse
  .text.INVERTER_tick
-                0x0000000000000384       0x58 build/default/production/inverter.o
-                0x0000000000000384                INVERTER_tick
+                0x00000000000007ee       0xc6 build/default/production/inverter.o
+                0x00000000000007ee                INVERTER_tick
  .text.modbus_get
-                0x00000000000003dc       0xbc build/default/production/modbus.o
-                0x00000000000003dc                modbus_get
+                0x00000000000008b4       0x66 build/default/production/modbus.o
+                0x00000000000008b4                modbus_get
  .text.modbus_init
-                0x0000000000000498        0xc build/default/production/modbus.o
-                0x0000000000000498                modbus_init
+                0x000000000000091a        0xa build/default/production/modbus.o
+                0x000000000000091a                modbus_init
  .text.modbus_tick
-                0x00000000000004a4        0x6 build/default/production/modbus.o
-                0x00000000000004a4                modbus_tick
+                0x0000000000000924        0x4 build/default/production/modbus.o
+                0x0000000000000924                modbus_tick
  .text.modbusGetBusState
-                0x00000000000004aa        0x6 build/default/production/yaMBSiavr.o
-                0x00000000000004aa                modbusGetBusState
+                0x0000000000000928        0x6 build/default/production/yaMBSiavr.o
+                0x0000000000000928                modbusGetBusState
  .text.modbusSetAddress
-                0x00000000000004b0        0x6 build/default/production/yaMBSiavr.o
-                0x00000000000004b0                modbusSetAddress
- .text.crc16    0x00000000000004b6       0x8c build/default/production/yaMBSiavr.o
-                0x00000000000004b6                crc16
+                0x000000000000092e        0x6 build/default/production/yaMBSiavr.o
+                0x000000000000092e                modbusSetAddress
+ .text.crc16    0x0000000000000934       0x7c build/default/production/yaMBSiavr.o
+                0x0000000000000934                crc16
  .text.listBitCopy
-                0x0000000000000542       0x82 build/default/production/yaMBSiavr.o
-                0x0000000000000542                listBitCopy
+                0x00000000000009b0       0x60 build/default/production/yaMBSiavr.o
+                0x00000000000009b0                listBitCopy
  .text.modbusReset
-                0x00000000000005c4       0x10 build/default/production/yaMBSiavr.o
-                0x00000000000005c4                modbusReset
+                0x0000000000000a10       0x10 build/default/production/yaMBSiavr.o
+                0x0000000000000a10                modbusReset
  .text.modbusTickTimer
-                0x00000000000005d4       0x8c build/default/production/yaMBSiavr.o
-                0x00000000000005d4                modbusTickTimer
+                0x0000000000000a20       0x86 build/default/production/yaMBSiavr.o
+                0x0000000000000a20                modbusTickTimer
  .text.__vector_17
-                0x0000000000000660       0xee build/default/production/yaMBSiavr.o
-                0x0000000000000660                __vector_17
+                0x0000000000000aa6       0xe6 build/default/production/yaMBSiavr.o
+                0x0000000000000aa6                __vector_17
  .text.__vector_18
-                0x000000000000074e       0x84 build/default/production/yaMBSiavr.o
-                0x000000000000074e                __vector_18
+                0x0000000000000b8c       0x84 build/default/production/yaMBSiavr.o
+                0x0000000000000b8c                __vector_18
  .text.__vector_19
-                0x00000000000007d2       0x4e build/default/production/yaMBSiavr.o
-                0x00000000000007d2                __vector_19
+                0x0000000000000c10       0x4e build/default/production/yaMBSiavr.o
+                0x0000000000000c10                __vector_19
  .text.modbusInit
-                0x0000000000000820       0x28 build/default/production/yaMBSiavr.o
-                0x0000000000000820                modbusInit
+                0x0000000000000c5e       0x28 build/default/production/yaMBSiavr.o
+                0x0000000000000c5e                modbusInit
  .text.modbusSendMessage
-                0x0000000000000848       0x3a build/default/production/yaMBSiavr.o
-                0x0000000000000848                modbusSendMessage
+                0x0000000000000c86       0x3a build/default/production/yaMBSiavr.o
+                0x0000000000000c86                modbusSendMessage
  .text.modbusSendException
-                0x0000000000000882       0x14 build/default/production/yaMBSiavr.o
-                0x0000000000000882                modbusSendException
+                0x0000000000000cc0       0x12 build/default/production/yaMBSiavr.o
+                0x0000000000000cc0                modbusSendException
  .text.modbusRequestedAmount
-                0x0000000000000896        0xe build/default/production/yaMBSiavr.o
-                0x0000000000000896                modbusRequestedAmount
+                0x0000000000000cd2        0xe build/default/production/yaMBSiavr.o
+                0x0000000000000cd2                modbusRequestedAmount
  .text.modbusRequestedAddress
-                0x00000000000008a4        0xe build/default/production/yaMBSiavr.o
-                0x00000000000008a4                modbusRequestedAddress
+                0x0000000000000ce0        0xe build/default/production/yaMBSiavr.o
+                0x0000000000000ce0                modbusRequestedAddress
  .text.intToModbusRegister
-                0x00000000000008b2       0x26 build/default/production/yaMBSiavr.o
-                0x00000000000008b2                intToModbusRegister
+                0x0000000000000cee       0x20 build/default/production/yaMBSiavr.o
+                0x0000000000000cee                intToModbusRegister
  .text.modbusRegisterToInt
-                0x00000000000008d8       0x2a build/default/production/yaMBSiavr.o
-                0x00000000000008d8                modbusRegisterToInt
+                0x0000000000000d0e       0x26 build/default/production/yaMBSiavr.o
+                0x0000000000000d0e                modbusRegisterToInt
  .text.modbusExchangeRegisters
-                0x0000000000000902      0x140 build/default/production/yaMBSiavr.o
-                0x0000000000000902                modbusExchangeRegisters
+                0x0000000000000d34      0x110 build/default/production/yaMBSiavr.o
+                0x0000000000000d34                modbusExchangeRegisters
  .text.modbusExchangeBits
-                0x0000000000000a42      0x196 build/default/production/yaMBSiavr.o
-                0x0000000000000a42                modbusExchangeBits
- .text.libgcc   0x0000000000000bd8        0xc /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_tablejump2.o)
-                0x0000000000000bd8                __tablejump2__
-                0x0000000000000be4                . = ALIGN (0x2)
+                0x0000000000000e44      0x15e build/default/production/yaMBSiavr.o
+                0x0000000000000e44                modbusExchangeBits
+ .text.__vector_30
+                0x0000000000000fa2       0xd0 build/default/production/nvmctrl.o
+                0x0000000000000fa2                __vector_30
+ .text.NVMCTRL_init
+                0x0000000000001072        0xc build/default/production/nvmctrl.o
+                0x0000000000001072                NVMCTRL_init
+ .text.NVMCTRL_read_eeprom_block
+                0x000000000000107e       0x14 build/default/production/nvmctrl.o
+                0x000000000000107e                NVMCTRL_read_eeprom_block
+ .text.libgcc   0x0000000000001092        0xc /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_tablejump2.o)
+                0x0000000000001092                __tablejump2__
+ .text.avr-libc
+                0x000000000000109e       0x12 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avrxmega3/libc.a(memcpy.o)
+                0x000000000000109e                memcpy
+                0x00000000000010b0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000000be4        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_exit.o)
-                0x0000000000000be4                exit
-                0x0000000000000be4                _exit
+ .fini9         0x00000000000010b0        0x0 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_exit.o)
+                0x00000000000010b0                exit
+                0x00000000000010b0                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -460,16 +512,16 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000000be4        0x4 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_exit.o)
+ .fini0         0x00000000000010b0        0x4 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/bin/../lib/gcc/avr/5.4.0/avrxmega3/libgcc.a(_exit.o)
  *(.fini0)
-                0x0000000000000be8                _etext = .
+                0x00000000000010b4                _etext = .
 
 .rodata
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.r*)
 
-.data           0x0000000000802800        0x2 load address 0x0000000000000be8
+.data           0x0000000000802800        0x2 load address 0x00000000000010b4
                 0x0000000000802800                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -482,71 +534,55 @@ END GROUP
                 0x0000000000802802                _edata = .
                 0x0000000000802802                PROVIDE (__data_end, .)
 
-.bss            0x0000000000802802      0x147
+.bss            0x0000000000802802      0x191
                 0x0000000000802802                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.tickcount
                 0x0000000000802802        0x1 build/default/production/main.o
                 0x0000000000802802                tickcount
- .bss.Inverter_Com_stat
-                0x0000000000802803        0x1 build/default/production/inverter.o
-                0x0000000000802803                Inverter_Com_stat
- .bss.Inverter_Com_count
-                0x0000000000802804        0x1 build/default/production/inverter.o
-                0x0000000000802804                Inverter_Com_count
- .bss.Inverter_Tick_count
-                0x0000000000802805        0x2 build/default/production/inverter.o
-                0x0000000000802805                Inverter_Tick_count
- .bss.ins       0x0000000000802807        0x1 build/default/production/modbus.o
-                0x0000000000802807                ins
- .bss.outstate  0x0000000000802808        0x1 build/default/production/modbus.o
-                0x0000000000802808                outstate
- .bss.Address   0x0000000000802809        0x1 build/default/production/yaMBSiavr.o
-                0x0000000000802809                Address
+ .bss.Address   0x0000000000802803        0x1 build/default/production/yaMBSiavr.o
+                0x0000000000802803                Address
  .bss.modbusTimer
-                0x000000000080280a        0x2 build/default/production/yaMBSiavr.o
-                0x000000000080280a                modbusTimer
- .bss.BusState  0x000000000080280c        0x1 build/default/production/yaMBSiavr.o
-                0x000000000080280c                BusState
- .bss.DataPos   0x000000000080280d        0x2 build/default/production/yaMBSiavr.o
-                0x000000000080280d                DataPos
+                0x0000000000802804        0x2 build/default/production/yaMBSiavr.o
+                0x0000000000802804                modbusTimer
+ .bss.BusState  0x0000000000802806        0x1 build/default/production/yaMBSiavr.o
+                0x0000000000802806                BusState
+ .bss.DataPos   0x0000000000802807        0x2 build/default/production/yaMBSiavr.o
+                0x0000000000802807                DataPos
+ .bss.NVMCTRL_desc
+                0x0000000000802809        0x8 build/default/production/nvmctrl.o
  *(COMMON)
- COMMON         0x000000000080280f       0x2a build/default/production/inverter.o
-                0x000000000080280f                Inverter
-                0x0000000000802836                Inverter_RX_Error
-                0x0000000000802837                Inverter_last_bytetime
- COMMON         0x0000000000802839      0x110 build/default/production/modbus.o
-                0x0000000000802839                holdingRegisters
-                0x0000000000802841                inputRegisters
-                0x0000000000802849                rxbuffer
-                0x0000000000802949                PROVIDE (__bss_end, .)
-                0x0000000000000be8                __data_load_start = LOADADDR (.data)
-                0x0000000000000bea                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0000000000802811       0x42 build/default/production/inverter.o
+                0x0000000000802811                InverterData
+                0x0000000000802842                EEpromData
+                0x0000000000802852                Inverter_RX_Error
+ COMMON         0x0000000000802853      0x140 build/default/production/modbus.o
+                0x0000000000802853                modbusData
+                0x0000000000802893                rxbuffer
+                0x0000000000802993                PROVIDE (__bss_end, .)
+                0x00000000000010b4                __data_load_start = LOADADDR (.data)
+                0x00000000000010b6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000802949        0x0
+.noinit         0x0000000000802993        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x0000000000802949                _end = .
+                0x0000000000802993                _end = .
                 [!provide]                        PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)
                 0x0000000000810000                __eeprom_end = .
 
-.fuse           0x0000000000820000        0x9
+.fuse
  *(.fuse)
- .fuse          0x0000000000820000        0x9 build/default/production/main.o
-                0x0000000000820000                __fuse
  *(.lfuse)
  *(.hfuse)
  *(.efuse)
 
-.lock           0x0000000000830000        0x1
+.lock
  *(.lock*)
- .lock          0x0000000000830000        0x1 build/default/production/main.o
-                0x0000000000830000                __lock
 
 .signature
  *(.signature*)
@@ -579,6 +615,7 @@ END GROUP
  .comment       0x0000000000000030       0x31 build/default/production/inverter.o
  .comment       0x0000000000000030       0x31 build/default/production/modbus.o
  .comment       0x0000000000000030       0x31 build/default/production/yaMBSiavr.o
+ .comment       0x0000000000000030       0x31 build/default/production/nvmctrl.o
 
 .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x40

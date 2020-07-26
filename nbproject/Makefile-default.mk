@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c inverter.c modbus.c yaMBSiavr.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c inverter.c modbus.c yaMBSiavr.c nvmctrl.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/inverter.o ${OBJECTDIR}/modbus.o ${OBJECTDIR}/yaMBSiavr.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/inverter.o.d ${OBJECTDIR}/modbus.o.d ${OBJECTDIR}/yaMBSiavr.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/inverter.o ${OBJECTDIR}/modbus.o ${OBJECTDIR}/yaMBSiavr.o ${OBJECTDIR}/nvmctrl.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/inverter.o.d ${OBJECTDIR}/modbus.o.d ${OBJECTDIR}/yaMBSiavr.o.d ${OBJECTDIR}/nvmctrl.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/inverter.o ${OBJECTDIR}/modbus.o ${OBJECTDIR}/yaMBSiavr.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/inverter.o ${OBJECTDIR}/modbus.o ${OBJECTDIR}/yaMBSiavr.o ${OBJECTDIR}/nvmctrl.o
 
 # Source Files
-SOURCEFILES=main.c inverter.c modbus.c yaMBSiavr.c
+SOURCEFILES=main.c inverter.c modbus.c yaMBSiavr.c nvmctrl.c
 
 # Pack Options 
 PACK_COMPILER_OPTIONS=-I ${DFP_DIR}/include
@@ -114,50 +114,62 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/inverter.o: inverter.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/inverter.o.d 
 	@${RM} ${OBJECTDIR}/inverter.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/inverter.o.d" -MT "${OBJECTDIR}/inverter.o.d" -MT ${OBJECTDIR}/inverter.o  -o ${OBJECTDIR}/inverter.o inverter.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/inverter.o.d" -MT "${OBJECTDIR}/inverter.o.d" -MT ${OBJECTDIR}/inverter.o  -o ${OBJECTDIR}/inverter.o inverter.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/modbus.o: modbus.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/modbus.o.d 
 	@${RM} ${OBJECTDIR}/modbus.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/modbus.o.d" -MT "${OBJECTDIR}/modbus.o.d" -MT ${OBJECTDIR}/modbus.o  -o ${OBJECTDIR}/modbus.o modbus.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/modbus.o.d" -MT "${OBJECTDIR}/modbus.o.d" -MT ${OBJECTDIR}/modbus.o  -o ${OBJECTDIR}/modbus.o modbus.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/yaMBSiavr.o: yaMBSiavr.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/yaMBSiavr.o.d 
 	@${RM} ${OBJECTDIR}/yaMBSiavr.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/yaMBSiavr.o.d" -MT "${OBJECTDIR}/yaMBSiavr.o.d" -MT ${OBJECTDIR}/yaMBSiavr.o  -o ${OBJECTDIR}/yaMBSiavr.o yaMBSiavr.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/yaMBSiavr.o.d" -MT "${OBJECTDIR}/yaMBSiavr.o.d" -MT ${OBJECTDIR}/yaMBSiavr.o  -o ${OBJECTDIR}/yaMBSiavr.o yaMBSiavr.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/nvmctrl.o: nvmctrl.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/nvmctrl.o.d 
+	@${RM} ${OBJECTDIR}/nvmctrl.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/nvmctrl.o.d" -MT "${OBJECTDIR}/nvmctrl.o.d" -MT ${OBJECTDIR}/nvmctrl.o  -o ${OBJECTDIR}/nvmctrl.o nvmctrl.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/inverter.o: inverter.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/inverter.o.d 
 	@${RM} ${OBJECTDIR}/inverter.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/inverter.o.d" -MT "${OBJECTDIR}/inverter.o.d" -MT ${OBJECTDIR}/inverter.o  -o ${OBJECTDIR}/inverter.o inverter.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/inverter.o.d" -MT "${OBJECTDIR}/inverter.o.d" -MT ${OBJECTDIR}/inverter.o  -o ${OBJECTDIR}/inverter.o inverter.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/modbus.o: modbus.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/modbus.o.d 
 	@${RM} ${OBJECTDIR}/modbus.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/modbus.o.d" -MT "${OBJECTDIR}/modbus.o.d" -MT ${OBJECTDIR}/modbus.o  -o ${OBJECTDIR}/modbus.o modbus.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/modbus.o.d" -MT "${OBJECTDIR}/modbus.o.d" -MT ${OBJECTDIR}/modbus.o  -o ${OBJECTDIR}/modbus.o modbus.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/yaMBSiavr.o: yaMBSiavr.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/yaMBSiavr.o.d 
 	@${RM} ${OBJECTDIR}/yaMBSiavr.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/yaMBSiavr.o.d" -MT "${OBJECTDIR}/yaMBSiavr.o.d" -MT ${OBJECTDIR}/yaMBSiavr.o  -o ${OBJECTDIR}/yaMBSiavr.o yaMBSiavr.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/yaMBSiavr.o.d" -MT "${OBJECTDIR}/yaMBSiavr.o.d" -MT ${OBJECTDIR}/yaMBSiavr.o  -o ${OBJECTDIR}/yaMBSiavr.o yaMBSiavr.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/nvmctrl.o: nvmctrl.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/nvmctrl.o.d 
+	@${RM} ${OBJECTDIR}/nvmctrl.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atmega4809 ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=10000000 -Wall -MD -MP -MF "${OBJECTDIR}/nvmctrl.o.d" -MT "${OBJECTDIR}/nvmctrl.o.d" -MT ${OBJECTDIR}/nvmctrl.o  -o ${OBJECTDIR}/nvmctrl.o nvmctrl.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 endif
 

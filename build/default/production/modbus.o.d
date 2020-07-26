@@ -14,7 +14,8 @@ build/default/production/modbus.o.d build/default/production/modbus.o: \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/lock.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/wdt.h \
- modbus.h yaMBSiavr.h
+ modbus.h inverter.h yaMBSiavr.h nvmctrl.h \
+ /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stddef.h
 
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/io.h:
 
@@ -46,4 +47,10 @@ build/default/production/modbus.o.d build/default/production/modbus.o: \
 
 modbus.h:
 
+inverter.h:
+
 yaMBSiavr.h:
+
+nvmctrl.h:
+
+/home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stddef.h:

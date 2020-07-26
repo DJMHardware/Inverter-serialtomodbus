@@ -18,7 +18,7 @@ build/default/production/inverter.o.d build/default/production/inverter.o: \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/string.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stddef.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h \
- inverter.h
+ inverter.h modbus.h nvmctrl.h
 
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/io.h:
 
@@ -57,3 +57,7 @@ build/default/production/inverter.o.d build/default/production/inverter.o: \
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h:
 
 inverter.h:
+
+modbus.h:
+
+nvmctrl.h:

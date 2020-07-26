@@ -1,4 +1,5 @@
-build/default/debug/main.o.d build/default/debug/main.o: main.c \
+build/default/production/nvmctrl.o.d build/default/production/nvmctrl.o: \
+ nvmctrl.c \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/io.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/sfr_defs.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/inttypes.h \
@@ -11,12 +12,10 @@ build/default/debug/main.o.d build/default/debug/main.o: main.c \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/xmega.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/fuse.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/lock.h \
- hardware.h \
+ /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/string.h \
+ /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stddef.h \
  /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h \
- /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay.h \
- /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay_basic.h \
- /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/math.h \
- modbus.h inverter.h
+ nvmctrl.h
 
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/io.h:
 
@@ -42,16 +41,10 @@ build/default/debug/main.o.d build/default/debug/main.o: main.c \
 
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/lock.h:
 
-hardware.h:
+/home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/string.h:
+
+/home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/lib/gcc/avr/5.4.0/include/stddef.h:
 
 /home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/avr/interrupt.h:
 
-/home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay.h:
-
-/home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/util/delay_basic.h:
-
-/home/sasquachdm/opt/microchip/avr8-gnu-toolchain-linux_x86_64/avr/include/math.h:
-
-modbus.h:
-
-inverter.h:
+nvmctrl.h:
