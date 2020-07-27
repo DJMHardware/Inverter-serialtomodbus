@@ -28,8 +28,8 @@
 
 ## Discrete Input
 
-| Discrete Input |        Name      
-|:----:|:------------------|:------|
+| Discrete Input |        Name
+|:----:|:------------------|
 |  1 | Inverter_On_Off            |
 |  2 | Inverter_led_solid         |
 |  3 | Inverter_led_blink         |
