@@ -1,6 +1,50 @@
 # ModBus definitions
+
+| Function Code	| Register Type |
+| :-----------: | :-------|
+| 1	 |  Read Coil |
+| 2	 |  Read Discrete Input |
+| 3	 |  Read Holding Registers |
+| 4	 |  Read Input Registers |
+| 5	 |  Write Single Coil |
+| 6	 |  Write Single Holding Register |
+| 15 |	Write Multiple Coils |
+| 16 |	Write Multiple Holding Registers |
+
 ## Coils
+
+| Coil |        Name       | Notes |
+|:----:|:------------------|:------|
+|   1  | Inverter          |  |
+|   2  | Charger           |  |
+|   3  | SearchMode        |  |
+|   4  | ACInput           | needs to be on for Charger |
+|   5  | DisableRefloat    |  |
+|   6  | ForceSilent       |  |
+|   7  | ForceFloat        |  |
+|   8  | ForceBulk         |  |
+|   9  | ForceEQ           | cleared on write |
+|  10  | WriteEEprom       | cleared on write |
+
+## Discrete Input
+
+| Discrete Input |        Name      
+|:----:|:------------------|:------|
+|  1 | Inverter_On_Off            |
+|  2 | Inverter_led_solid         |
+|  3 | Inverter_led_blink         |
+|  4 | Charger_On_Off             |
+|  5 | Charger_led_solid          |
+|  6 | Charger_led_blink          |
+|  7 | AC_in_valid                |
+|  8 | RX_Timeout_between_bytes   |
+|  9 | RX_Timeout_between_packets |
+| 10 | RX_Extra_byte              |
+| 11 | Inverter_state_error       |
+| 12 | Charger_state_error        |
+
 ## Input Registers
+
 | Input Register | Inverter RX byte| Name| Range | Scaling | Units/notes|
 |-------:|--------:|:--------------:|:--------:|--------:|:-------         |
 |     1  |     0  |INVERTER_STATUS  | | | [Inverter status](#inverter-status)|
